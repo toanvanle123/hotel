@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hotel.Form;
 
 import java.awt.geom.GeneralPath;
@@ -228,7 +224,7 @@ public class phongform extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    
     private javax.swing.JButton jButtonclear3;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -256,5 +252,5 @@ public class phongform extends javax.swing.JFrame {
     private javax.swing.JButton them3;
     private javax.swing.JButton thoat3;
     private javax.swing.JButton xoa3;
-    // End of variables declaration//GEN-END:variables
+ 
 }
