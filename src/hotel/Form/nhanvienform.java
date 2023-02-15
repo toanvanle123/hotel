@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hotel.Form;
 
 import java.sql.*;
@@ -59,7 +55,7 @@ public class nhanvienform extends javax.swing.JFrame {
 
             row = new Object[7];
 
-            // GÁN GIÁ TRỊ
+            
             row[0] = dsnv.get(i).getMANV();
             row[1] = dsnv.get(i).getTENNV();
             row[2] = dsnv.get(i).getCHUCVU();
@@ -480,11 +476,7 @@ public class nhanvienform extends javax.swing.JFrame {
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -501,9 +493,7 @@ public class nhanvienform extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(nhanvienform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new nhanvienform().setVisible(true);
@@ -511,7 +501,7 @@ public class nhanvienform extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+   
     private javax.swing.JButton jButtonclear;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -537,5 +527,5 @@ public class nhanvienform extends javax.swing.JFrame {
     private javax.swing.JButton them;
     private javax.swing.JButton thoat;
     private javax.swing.JButton xoa;
-    // End of variables declaration//GEN-END:variables
+    
 }
