@@ -7,10 +7,7 @@ package hotel;
 
 import java.util.Date;
 
-/**
- *
- * @author khoa
- */
+
 public class NhanVien {
     private String MANV;
     private String TENNV;

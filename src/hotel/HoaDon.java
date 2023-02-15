@@ -7,10 +7,6 @@ package hotel;
 
 import java.util.Date;
 
-/**
- *
- * @author khoa
- */
 public class HoaDon {
     private String MAHD;
     private String MANV;

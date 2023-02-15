@@ -8,10 +8,6 @@ package hotel;
 import java.sql.DriverManager;
 import java.sql.Connection;
 
-/**
- *
- * @author khoa
- */
 
 public class MyConnection {
     public static Connection getConnection() {

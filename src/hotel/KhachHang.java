@@ -5,10 +5,7 @@
  */
 package hotel;
 
-/**
- *
- * @author khoa
- */
+
 public class KhachHang {
     private String MAKH;
     private String TENKH;

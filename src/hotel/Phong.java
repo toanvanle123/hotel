@@ -5,10 +5,7 @@
  */
 package hotel;
 
-/**
- *
- * @author khoa
- */
+
 public class Phong {
     private String MAPHONG;
     private String TENPHONG;
