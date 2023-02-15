@@ -310,7 +310,7 @@
             <Component class="javax.swing.JButton" name="them3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/hotel/Form/hinh/THEM.png"/>
+                  <Image iconType="3" name="/qlksk57/Form/hinh/THEM.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
               </Properties>
@@ -321,7 +321,7 @@
             <Component class="javax.swing.JButton" name="sua3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/hotel/Form/hinh/SUA.png"/>
+                  <Image iconType="3" name="/qlksk57/Form/hinh/SUA.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
               </Properties>
@@ -332,7 +332,7 @@
             <Component class="javax.swing.JButton" name="xoa3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/hotel/Form/hinh/XOA.png"/>
+                  <Image iconType="3" name="/qlksk57/Form/hinh/XOA.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="X&#xf3;a"/>
               </Properties>
@@ -343,7 +343,7 @@
             <Component class="javax.swing.JButton" name="thoat3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/hotel/Form/hinh/THOAT.png"/>
+                  <Image iconType="3" name="/qlksk57/Form/hinh/THOAT.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Tho&#xe1;t"/>
               </Properties>
@@ -368,7 +368,7 @@
             <Component class="javax.swing.JButton" name="jButtonclear3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/hotel/Form/hinh/CLEAR.png"/>
+                  <Image iconType="3" name="/qlksk57/Form/hinh/CLEAR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Clear"/>
               </Properties>

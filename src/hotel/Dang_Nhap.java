@@ -20,9 +20,11 @@ public class Dang_Nhap extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        Password = new javax.swing.JPasswordField();
+        txtPassword = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        txtUser.setText("admin");
+        txtPassword.setText("admin");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,7 +77,7 @@ public class Dang_Nhap extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                            .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
                             .addComponent(txtUser))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -96,7 +98,7 @@ public class Dang_Nhap extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addGap(54, 54, 54))
@@ -127,10 +129,10 @@ public class Dang_Nhap extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(txtUser.getText().equals("")){
             JOptionPane.showMessageDialog(this, "Vui lòng đăng nhập tài khoản");
-        } else if(Password.getText().equals("")){
+        } else if(txtPassword.getText().equals("")){
             JOptionPane.showMessageDialog(this, "Vui lòng đăng nhập mật khẩu");
         } else if(txtUser.getText().equals("admin")){
-                if(Password.getText().equals("admin")){
+                if(txtPassword.getText().equals("admin")){
                         JOptionPane.showMessageDialog(this, "đăng nhập thành công");
                         MENUFORM ql=new MENUFORM();
                         ql.setVisible(true);
@@ -174,7 +176,7 @@ public class Dang_Nhap extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField Password;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -1,28 +1,27 @@
 
 package hotel.Form;
 
-import java.awt.geom.GeneralPath;
 import java.sql.*;
 import java.util.ArrayList;
-import javax.annotation.processing.Generated;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
+
 import static hotel.MyConnection.getConnection;
 import hotel.Phong;
 
 
 
-public class phongform extends javax.swing.JFrame {
+public class phongformold extends javax.swing.JFrame {
 
 
-    public phongform() {
+    public phongformold() {
         initComponents();
         getConnection();
-        hienThiDanhSachPhong();
+        //hienThiDanhSachPhong();
     }
 
     private void initComponents() {
+
     }
 
     Connection con=null;
@@ -50,7 +49,11 @@ public class phongform extends javax.swing.JFrame {
         return dsp;
     }
     public void hienThiDanhSachPhong() {
-        String colTieuDe1[] = new String[]{"Mã Phòng", "Tên Phòng", "Loại Phòng", "Giá Phòng", "Chú Thích", "Tình Trạng", "Mã Nhân Viên", "Mã Dịch Vụ"};
+        String colTieuDe1[] = new String[]{"Mã Phòng",
+                "Tên Phòng", "Loại Phòng",
+                "Giá Phòng", "Chú Thích",
+                "Tình Trạng", "Mã Nhân Viên",
+                "Mã Dịch Vụ"};
         ArrayList<Phong> dsp = layDanhSachPhong();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -82,36 +85,35 @@ public class phongform extends javax.swing.JFrame {
 
     }
 
-    @SuppressWarnings("unchecked")
-    Generated Code;
+    //Generated Code
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
 
 
-    private void jTablePHONGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTablePHONGMouseClicked
-        // TODO add your handling code here:
-        JTable jTablePHONG = new JTable();
-        int i = jTablePHONG.getSelectedRow();
-        TableModel model = jTablePHONG.getModel();
-        AbstractButton jTextFieldMAPHONG = null;
-        jTextFieldMAPHONG.setText(model.getValueAt(i, 0).toString());
-        AbstractButton jTextFieldTENPHONG = null;
-        jTextFieldTENPHONG.setText(model.getValueAt(i, 1).toString());
-        AbstractButton jTextFieldLOAIPHONG = null;
-        jTextFieldLOAIPHONG.setText(model.getValueAt(i, 2).toString());
-        AbstractButton jTextFieldGIAPHONG = null;
-        jTextFieldGIAPHONG.setText(model.getValueAt(i, 3).toString());
-        AbstractButton jTextFieldCHUTHICHP = null;
-        jTextFieldCHUTHICHP.setText(model.getValueAt(i, 4).toString());
-        AbstractButton jTextFieldTINHTRANG = null;
-        jTextFieldTINHTRANG.setText(model.getValueAt(i, 5).toString());
-        AbstractButton jTextFieldMANVP = null;
-        jTextFieldMANVP.setText(model.getValueAt(i, 6).toString());
-        AbstractButton jTextFieldMADVP = null;
-        jTextFieldMADVP.setText(model.getValueAt(i, 7).toString());
-    }//GEN-LAST:event_jTablePHONGMouseClicked
+//    private void jTablePHONGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTablePHONGMouseClicked
+//        TODO add your handling code here:
+        //JTable jTablePHONG = new JTable();
+//        int i = jTablePHONG.getSelectedRow();
+//        TableModel model = jTablePHONG.getModel();
+//        AbstractButton jTextFieldMAPHONG = null;
+//        jTextFieldMAPHONG.setText(model.getValueAt(i, 0).toString());
+//        AbstractButton jTextFieldTENPHONG = null;
+//        jTextFieldTENPHONG.setText(model.getValueAt(i, 1).toString());
+//        AbstractButton jTextFieldLOAIPHONG = null;
+//        jTextFieldLOAIPHONG.setText(model.getValueAt(i, 2).toString());
+//        AbstractButton jTextFieldGIAPHONG = null;
+//        jTextFieldGIAPHONG.setText(model.getValueAt(i, 3).toString());
+//        AbstractButton jTextFieldCHUTHICHP = null;
+//        jTextFieldCHUTHICHP.setText(model.getValueAt(i, 4).toString());
+//        AbstractButton jTextFieldTINHTRANG = null;
+//        jTextFieldTINHTRANG.setText(model.getValueAt(i, 5).toString());
+//        AbstractButton jTextFieldMANVP = null;
+//        jTextFieldMANVP.setText(model.getValueAt(i, 6).toString());
+//        AbstractButton jTextFieldMADVP = null;
+//        jTextFieldMADVP.setText(model.getValueAt(i, 7).toString());
+  //  }//GEN-LAST:event_jTablePHONGMouseClicked
 
-    private void them3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_them3ActionPerformed
-        // TODO add your handling code here
+//    private void them3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_them3ActionPerformed
+//        // TODO add your handling code here
 //        Connection con = getConnection();
 //        String insertSql = "INSERT INTO NhanVien(MAPHONG,TENPHONG,LOAIPHONG, GIAPHONG, CHUTHICH, TINHTRANG, MANV, MADV) " +
 //                "VALUES(?, ?, ?, ?, ?, ?, ?,?)";
@@ -134,21 +136,21 @@ public class phongform extends javax.swing.JFrame {
 //        } catch (SQLException e) {
 //            System.err.println("Error while inserting data: " + e.getMessage());
 //        }
-        Connection con = getConnection();
-        try {
-            // Tạo một đối tượng để thực hiện công việc
-            st = (Statement) con.createStatement();
-            String query = "INSERT INTO phong(MAPHONG,TENPHONG, LOAIPHONG, GIAPHONG, CHUTHICH, TINHTRANG, MANV, MADV) VALUES('" + jTextFieldMAPHONG.getText() + "',"
-            + "'" + jTextFieldTENPHONG.getText() + "','" + jTextFieldLOAIPHONG.getText() + "', '" + jTextFieldGIAPHONG.getText() + "', '" + jTextFieldCHUTHICHP.getText() + "', '" + jTextFieldTINHTRANG.getText() + "', '" + jTextFieldMANVP.getText() + "', '" + jTextFieldMADVP.getText() + "')";
-
-            st.execute(query);
-            hienThiDanhSachPhong();
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
-    }//GEN-LAST:event_them3ActionPerformed
+//        Connection conn = getConnection();
+//        try {
+//            // Tạo một đối tượng để thực hiện công việc
+//            st = (Statement) con.createStatement();
+//            String query = "INSERT INTO phong(MAPHONG,TENPHONG, LOAIPHONG, GIAPHONG, CHUTHICH, TINHTRANG, MANV, MADV) VALUES('" + jTextFieldMAPHONG.getText() + "',"
+//            + "'" + jTextFieldTENPHONG.getText() + "','" + jTextFieldLOAIPHONG.getText() + "', '" + jTextFieldGIAPHONG.getText() + "', '" + jTextFieldCHUTHICHP.getText() + "', '" + jTextFieldTINHTRANG.getText() + "', '" + jTextFieldMANVP.getText() + "', '" + jTextFieldMADVP.getText() + "')";
+//
+//            st.execute(query);
+//            hienThiDanhSachPhong();
+//
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//        }
+//
+//    }//GEN-LAST:event_them3ActionPerformed
 
     private void sua3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sua3ActionPerformed
         // TODO add your handling code here:
@@ -219,7 +221,7 @@ public class phongform extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new phongform().setVisible(true);
+                new phongformold().setVisible(true);
             }
         });
     }
@@ -239,7 +241,7 @@ public class phongform extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTable jTablePHONG;
+    private javax.swing.JTable jTablePHONG = new JTable();
     private javax.swing.JTextField jTextFieldCHUTHICHP;
     private javax.swing.JTextField jTextFieldGIAPHONG;
     private javax.swing.JTextField jTextFieldLOAIPHONG;

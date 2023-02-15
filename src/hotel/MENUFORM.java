@@ -2,11 +2,11 @@
 package hotel;
 
 import javax.swing.JFrame;
-import hotel.Form.dichvuform;
-import hotel.Form.hoadonform;
-import hotel.Form.khachhangform;
-import hotel.Form.nhanvienform;
-import hotel.Form.phongform;
+ import hotel.Form.dichvuform;
+ import hotel.Form.hoadonform;
+ import hotel.Form.khachhangform;
+ import hotel.Form.nhanvienform;
+import hotel.Form.PhongForm;
 
 
 public class MENUFORM extends javax.swing.JFrame {
@@ -35,7 +35,7 @@ public class MENUFORM extends javax.swing.JFrame {
 
         jButtonnhanvien.setBackground(new java.awt.Color(255, 255, 255));
         jButtonnhanvien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/enploy.png"))); // NOI18N
-        jButtonnhanvien.setText("Nhân Viên");
+        jButtonnhanvien.setText("Employee");
         jButtonnhanvien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonnhanvienActionPerformed(evt);
@@ -44,7 +44,7 @@ public class MENUFORM extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/sssssasasas.png"))); // NOI18N
-        jButton3.setText("Dịch Vụ");
+        jButton3.setText("Service");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -53,7 +53,7 @@ public class MENUFORM extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/qqqqq.png"))); // NOI18N
-        jButton1.setText("Phòng");
+        jButton1.setText("Flat");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -62,7 +62,7 @@ public class MENUFORM extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/if_profile_3018530 (1).png"))); // NOI18N
-        jButton2.setText("Khách Hàng");
+        jButton2.setText("Customer");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -71,7 +71,7 @@ public class MENUFORM extends javax.swing.JFrame {
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/âsasasasasa.png"))); // NOI18N
-        jButton4.setText("Dịch Vụ");
+        jButton4.setText("Bill");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -163,7 +163,7 @@ public class MENUFORM extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code 
-        phongform pf = new phongform();
+        PhongForm pf = new PhongForm();
         pf.setVisible(true);
         pf.pack();
         pf.setLocationRelativeTo(null);

@@ -35,9 +35,7 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="622f9aeb-c08f-4400-a9e9-19c44257239c" object-ref="schemas/hotel_db/tables/booking" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="622f9aeb-c08f-4400-a9e9-19c44257239c" dataset="ql_khachsan.dichvu" active-filter-id="">
@@ -46,6 +44,9 @@
       </filter>
     </filter-actions>
     <filter-actions connection-id="622f9aeb-c08f-4400-a9e9-19c44257239c" dataset="hotel_db.booking" active-filter-id="EMPTY_FILTER" />
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
