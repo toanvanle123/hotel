@@ -10,10 +10,10 @@ import javax.swing.table.TableModel;
 import hotel.HoaDon;
 import static hotel.MyConnection.getConnection;
 
-public class hoadonform extends javax.swing.JFrame {
+public class HoaDonForm extends javax.swing.JFrame {
 
 
-    public hoadonform() {
+    public HoaDonForm() {
         initComponents();
         getConnection();
         hienThiDanhSachHoaDon();
@@ -28,14 +28,14 @@ public class hoadonform extends javax.swing.JFrame {
         try {
             st = (Statement) con.createStatement();
             String sql = "SELECT * FROM hoadon";
-            // Thưcj thi câu lệnh truy vấn
+
             ResultSet rs = st.executeQuery(sql);
 
             HoaDon hd;
             while (rs.next()) {
                 hd = new HoaDon(rs.getString("MAHD"), rs.getString("MANV"), rs.getString("MAPHONG"), rs.getDate("NGAY"), rs.getDouble("GIAHD") );
 
-                //Thêm vào danh sách
+
                 dshd.add(hd);
             }
         } catch (Exception ex) {
@@ -45,7 +45,7 @@ public class hoadonform extends javax.swing.JFrame {
         return dshd;
     }
      public void hienThiDanhSachHoaDon() {
-        String colTieuDe1[] = new String[]{"Mã Hóa Đơn", "Mã Nhân Viên", "Mã Phòng", "Ngày", "Giá Hóa Đơn"};
+        String colTieuDe1[] = new String[]{"Code Bill", "Employee Code", "Room Code", "Day", "Invoice Price"};
         ArrayList<HoaDon> dshd = layDanhSachHoaDon();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -56,7 +56,7 @@ public class hoadonform extends javax.swing.JFrame {
 
             row = new Object[5];
 
-            // GÁN GIÁ TRỊ
+
             row[0] = dshd.get(i).getMAHD();
             row[1] = dshd.get(i).getMANV();
             row[2] = dshd.get(i).getMAPHONG();
@@ -66,7 +66,7 @@ public class hoadonform extends javax.swing.JFrame {
             model.addRow(row);
         }
         
-        //    }catch(ArrayIndexOutOfBoundsException ex){
+
 
         jTableHOADON.setModel(model);
 
@@ -74,7 +74,6 @@ public class hoadonform extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel6 = new javax.swing.JPanel();
@@ -105,8 +104,8 @@ public class hoadonform extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(0, 204, 255));
 
-        jLabel31.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel31.setText("HÓA ĐƠN");
+        jLabel31.setFont(new java.awt.Font("Tahoma", 0, 36));
+        jLabel31.setText("Bill");
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
@@ -123,18 +122,18 @@ public class hoadonform extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel31))
         );
+        String colTieuDe1[] = new String[]{"Code Bill", "Employee Code", "Room Code", "Day", "Invoice Price"};
+        jPanel21.setBorder(javax.swing.BorderFactory.createTitledBorder("Invoice Information"));
 
-        jPanel21.setBorder(javax.swing.BorderFactory.createTitledBorder("Thông Tn Hóa Đơn"));
+        jLabel32.setText("Code Bill");
 
-        jLabel32.setText("Mã Hóa Đơn");
+        jLabel33.setText("Employee Code");
 
-        jLabel33.setText("Mã Nhân Viên");
+        jLabel34.setText("Room Code");
 
-        jLabel34.setText("Mã Phòng");
+        jLabel35.setText("Day");
 
-        jLabel35.setText("Ngày");
-
-        jLabel36.setText("Giá Hóa Đơn");
+        jLabel36.setText("Invoice Price");
 
         jTextFieldMAHD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,39 +147,39 @@ public class hoadonform extends javax.swing.JFrame {
             }
         });
 
-        them4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THEM.png"))); // NOI18N
-        them4.setText("Thêm");
+        them4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THEM.png")));
+        them4.setText("More");
         them4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 them4ActionPerformed(evt);
             }
         });
 
-        sua4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/SUA.png"))); // NOI18N
-        sua4.setText("Sửa");
+        sua4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/SUA.png")));
+        sua4.setText("Fix");
         sua4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sua4ActionPerformed(evt);
             }
         });
 
-        xoa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/XOA.png"))); // NOI18N
-        xoa4.setText("Xóa");
+        xoa4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/XOA.png")));
+        xoa4.setText("Delete");
         xoa4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 xoa4ActionPerformed(evt);
             }
         });
 
-        thoat4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THOAT.png"))); // NOI18N
-        thoat4.setText("Thoát");
+        thoat4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THOAT.png")));
+        thoat4.setText("Exit");
         thoat4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thoat4ActionPerformed(evt);
             }
         });
 
-        jButtonclear4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/CLEAR.png"))); // NOI18N
+        jButtonclear4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/CLEAR.png")));
         jButtonclear4.setText("Clear");
         jButtonclear4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -342,21 +341,21 @@ public class hoadonform extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jTextFieldMAHDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMAHDActionPerformed
+    private void jTextFieldMAHDActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMAHDActionPerformed
+    }
 
-    private void jTextFieldMAPHONGHDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMAPHONGHDActionPerformed
+    private void jTextFieldMAPHONGHDActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMAPHONGHDActionPerformed
+    }
 
-    private void them4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_them4ActionPerformed
+    private void them4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "INSERT INTO hoadon(MAHD,MANV, MAPHONG, NGAY, GIAHD) VALUES('" + jTextFieldMAHD.getText() + "',"
             + "'" + jTextFieldMANVHD.getText() + "','" + jTextFieldMAPHONGHD.getText() + "', '" + jTextFieldNGAY.getText() + "', '" + jTextFieldGIAHD.getText() + "')";
@@ -368,16 +367,16 @@ public class hoadonform extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-    }//GEN-LAST:event_them4ActionPerformed
+    }
 
-    private void sua4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sua4ActionPerformed
+    private void sua4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (jTableHOADON.getSelectedRow()==-1) {
             if (jTableHOADON.getRowCount()==0) {
-                // lblError.setText("Table is empty");
+
             }
             else{
-                //  lblError.setText("You must select a Tennis Player");
+
             }
         }
         else{
@@ -389,13 +388,13 @@ public class hoadonform extends javax.swing.JFrame {
             model.setValueAt(jTextFieldGIAHD.getText(), jTableHOADON.getSelectedRow(), 4);
         }
 
-    }//GEN-LAST:event_sua4ActionPerformed
+    }
 
-    private void xoa4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoa4ActionPerformed
+    private void xoa4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "DELETE FROM hoadon WHERE MAHD = '" + jTextFieldMAHD.getText() + "'";
             st.executeUpdate(query);
@@ -405,20 +404,20 @@ public class hoadonform extends javax.swing.JFrame {
 
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_xoa4ActionPerformed
+    }
 
-    private void thoat4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thoat4ActionPerformed
+    private void thoat4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        thoat4.setToolTipText("Click để thoát chương trình ");
-        int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
-            + " trình không", "Thông báo", JOptionPane.YES_NO_CANCEL_OPTION);
+        thoat4.setToolTipText("Click to exit the program ");
+        int selected = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit the program?"
+            + " trình không", "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
         if (selected == JOptionPane.YES_NO_OPTION) {
             this.dispose();
 
         }
-    }//GEN-LAST:event_thoat4ActionPerformed
+    }
 
-    private void jButtonclear4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonclear4ActionPerformed
+    private void jButtonclear4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jTextFieldMAHD.setText("");
         jTextFieldMANVHD.setText("");
@@ -427,9 +426,9 @@ public class hoadonform extends javax.swing.JFrame {
         jTextFieldGIAHD.setText("");
         jTextFieldMAHD.requestFocus();
 
-    }//GEN-LAST:event_jButtonclear4ActionPerformed
+    }
 
-    private void jTableHOADONMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableHOADONMouseClicked
+    private void jTableHOADONMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here:
         int i = jTableHOADON.getSelectedRow();
         TableModel model = jTableHOADON.getModel();
@@ -438,7 +437,7 @@ public class hoadonform extends javax.swing.JFrame {
         jTextFieldMAPHONGHD.setText(model.getValueAt(i, 2).toString());
         jTextFieldNGAY.setText(model.getValueAt(i, 3).toString());
         jTextFieldGIAHD.setText(model.getValueAt(i, 4).toString());
-    }//GEN-LAST:event_jTableHOADONMouseClicked
+    }
 
 
     public static void main(String args[]) {
@@ -451,18 +450,18 @@ public class hoadonform extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(hoadonform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HoaDonForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(hoadonform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HoaDonForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(hoadonform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HoaDonForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(hoadonform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HoaDonForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new hoadonform().setVisible(true);
+                new HoaDonForm().setVisible(true);
             }
         });
     }

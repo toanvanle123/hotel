@@ -2,10 +2,10 @@
 package hotel;
 
 import javax.swing.JFrame;
- import hotel.Form.dichvuform;
- import hotel.Form.hoadonform;
- import hotel.Form.khachhangform;
- import hotel.Form.nhanvienform;
+ import hotel.Form.DichVuForm;
+ import hotel.Form.HoaDonForm;
+ import hotel.Form.KhachHangForm;
+ import hotel.Form.NhanVienForm;
 import hotel.Form.PhongForm;
 
 
@@ -34,7 +34,7 @@ public class MENUFORM extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(51, 255, 255));
 
         jButtonnhanvien.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonnhanvien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/enploy.png"))); // NOI18N
+        jButtonnhanvien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/enploy.png")));
         jButtonnhanvien.setText("Employee");
         jButtonnhanvien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,7 +43,7 @@ public class MENUFORM extends javax.swing.JFrame {
         });
 
         jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/sssssasasas.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/sssssasasas.png")));
         jButton3.setText("Service");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,7 +52,7 @@ public class MENUFORM extends javax.swing.JFrame {
         });
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/qqqqq.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/qqqqq.png")));
         jButton1.setText("Flat");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,7 +61,7 @@ public class MENUFORM extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/if_profile_3018530 (1).png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/if_profile_3018530 (1).png")));
         jButton2.setText("Customer");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +70,7 @@ public class MENUFORM extends javax.swing.JFrame {
         });
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/âsasasasasa.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/âsasasasasa.png")));
         jButton4.setText("Bill");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,29 +139,29 @@ public class MENUFORM extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jButtonnhanvienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonnhanvienActionPerformed
+    private void jButtonnhanvienActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here
-        nhanvienform nvf = new nhanvienform();
+        NhanVienForm nvf = new NhanVienForm();
         nvf.setVisible(true);
         nvf.pack();
         nvf.setLocationRelativeTo(null);
         nvf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-    }//GEN-LAST:event_jButtonnhanvienActionPerformed
+    }
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        khachhangform khf = new khachhangform();
+        KhachHangForm khf = new KhachHangForm();
         khf.setVisible(true);
         khf.pack();
         khf.setLocationRelativeTo(null);
         khf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code 
         PhongForm pf = new PhongForm();
         pf.setVisible(true);
@@ -169,25 +169,25 @@ public class MENUFORM extends javax.swing.JFrame {
         pf.setLocationRelativeTo(null);
         pf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here
-        hoadonform hdf = new hoadonform();
+        HoaDonForm hdf = new HoaDonForm();
         hdf.setVisible(true);
         hdf.pack();
         hdf.setLocationRelativeTo(null);
         hdf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        dichvuform dvf = new dichvuform();
+        DichVuForm dvf = new DichVuForm();
         dvf.setVisible(true);
         dvf.pack();
         dvf.setLocationRelativeTo(null);
         dvf.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }
 
 
     public static void main(String args[]) {

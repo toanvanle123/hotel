@@ -13,10 +13,10 @@ import static hotel.MyConnection.getConnection;
 
 
 
-public class dichvuform extends javax.swing.JFrame {
+public class DichVuForm extends javax.swing.JFrame {
 
     
-    public dichvuform() {
+    public DichVuForm() {
         initComponents();
         getConnection();
         hienThiDanhSachDichVu();
@@ -30,14 +30,14 @@ public class dichvuform extends javax.swing.JFrame {
         try {
             st = (Statement) con.createStatement();
             String sql = "SELECT * FROM dichvu";
-            // Thưcj thi câu lệnh truy vấn
+
             ResultSet rs = st.executeQuery(sql);
 
             DichVu dv;
             while (rs.next()) {
                 dv = new DichVu(rs.getString("MADV"), rs.getString("TENDV"), rs.getDouble("GIADV") );
 
-                //Thêm vào danh sách
+
                 dsdv.add(dv);
             }
         } catch (Exception ex) {
@@ -47,7 +47,7 @@ public class dichvuform extends javax.swing.JFrame {
         return dsdv;
     }
     public void hienThiDanhSachDichVu() {
-        String colTieuDe1[] = new String[]{"Mã Dịch Vụ", "Tên Dịch Vụ", "Giá Dịch Vụ"};
+        String colTieuDe1[] = new String[]{"Service Code", "Service name", "Service prices"};
         ArrayList<DichVu> dsdv = layDanhSachDichVu();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -58,7 +58,7 @@ public class dichvuform extends javax.swing.JFrame {
 
             row = new Object[3];
 
-            // GÁN GIÁ TRỊ
+
             row[0] = dsdv.get(i).getMADV();
             row[1] = dsdv.get(i).getTENNVL();
             row[2] = dsdv.get(i).getGIADV();
@@ -66,7 +66,7 @@ public class dichvuform extends javax.swing.JFrame {
             model.addRow(row);
         }
         
-        //    }catch(ArrayIndexOutOfBoundsException ex){
+
 
         jTableDichvu.setModel(model);
 
@@ -75,7 +75,6 @@ public class dichvuform extends javax.swing.JFrame {
 
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel7 = new javax.swing.JPanel();
@@ -101,8 +100,8 @@ public class dichvuform extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(0, 204, 255));
 
         jLabel18.setBackground(new java.awt.Color(0, 0, 255));
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel18.setText("DANH SÁCH DỊCH VỤ");
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 24));
+        jLabel18.setText("LIST OF SERVICES");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -121,47 +120,47 @@ public class dichvuform extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder("Thông Tin Dịch Vụ"));
+        jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder("Information Services"));
 
-        jLabel19.setText("Mã Dịch Vụ");
+        jLabel19.setText("Service Code");
 
-        jLabel20.setText("Tên DịchVụ");
+        jLabel20.setText("Service name");
 
-        jLabel21.setText("Giá Dịch Vụ");
+        jLabel21.setText("Service prices");
 
-        them2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THEM.png"))); // NOI18N
-        them2.setText("Thêm");
+        them2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THEM.png")));
+        them2.setText("More");
         them2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 them2ActionPerformed(evt);
             }
         });
 
-        sua2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/SUA.png"))); // NOI18N
-        sua2.setText("Sửa");
+        sua2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/SUA.png")));
+        sua2.setText("Fix");
         sua2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sua2ActionPerformed(evt);
             }
         });
 
-        xoa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/XOA.png"))); // NOI18N
-        xoa2.setText("Xóa");
+        xoa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/XOA.png")));
+        xoa2.setText("Delete");
         xoa2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 xoa2ActionPerformed(evt);
             }
         });
 
-        thoat2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THOAT.png"))); // NOI18N
-        thoat2.setText("Thoát");
+        thoat2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THOAT.png")));
+        thoat2.setText("Exit");
         thoat2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thoat2ActionPerformed(evt);
             }
         });
 
-        jButtonclear1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/CLEAR.png"))); // NOI18N
+        jButtonclear1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/CLEAR.png")));
         jButtonclear1.setText("Clear");
         jButtonclear1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -289,13 +288,13 @@ public class dichvuform extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void them2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_them2ActionPerformed
+    private void them2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "INSERT INTO DichVu(MADV,TENDV, GIADV) VALUES('" + jTextFieldMADV.getText() + "',"
             + "'" + jTextFieldTENDV.getText() + "','" + jTextFieldGIADV.getText() + "')";
@@ -306,16 +305,16 @@ public class dichvuform extends javax.swing.JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_them2ActionPerformed
+    }
 
-    private void sua2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sua2ActionPerformed
+    private void sua2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (jTableDichvu.getSelectedRow()==-1) {
             if (jTableDichvu.getRowCount()==0) {
-                // lblError.setText("Table is empty");
+
             }
             else{
-                //  lblError.setText("You must select a Tennis Player");
+
             }
         }
         else{
@@ -325,13 +324,13 @@ public class dichvuform extends javax.swing.JFrame {
             model.setValueAt(jTextFieldGIADV.getText(), jTableDichvu.getSelectedRow(), 2);
         }
 
-    }//GEN-LAST:event_sua2ActionPerformed
+    }
 
-    private void xoa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoa2ActionPerformed
+    private void xoa2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "DELETE FROM dichvu WHERE MADV = '" + jTextFieldMADV.getText() + "'";
             st.executeUpdate(query);
@@ -341,29 +340,29 @@ public class dichvuform extends javax.swing.JFrame {
 
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_xoa2ActionPerformed
+    }
 
-    private void thoat2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thoat2ActionPerformed
+    private void thoat2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        thoat2.setToolTipText("Click để thoát chương trình ");
-        int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
-            + " trình không", "Thông báo", JOptionPane.YES_NO_CANCEL_OPTION);
+        thoat2.setToolTipText("Click to exit the program ");
+        int selected = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit the program?"
+            + " ", "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
         if (selected == JOptionPane.YES_NO_OPTION) {
             this.dispose();
 
         }
 
-    }//GEN-LAST:event_thoat2ActionPerformed
+    }
 
-    private void jButtonclear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonclear1ActionPerformed
+    private void jButtonclear1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jTextFieldMADV.setText("");
         jTextFieldTENDV.setText("");
         jTextFieldGIADV.setText("");
         jTextFieldMADV.requestFocus();
-    }//GEN-LAST:event_jButtonclear1ActionPerformed
+    }
 
-    private void jTableDichvuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableDichvuMouseClicked
+    private void jTableDichvuMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here
         int i = jTableDichvu.getSelectedRow();
         TableModel model = jTableDichvu.getModel();
@@ -371,15 +370,11 @@ public class dichvuform extends javax.swing.JFrame {
         jTextFieldTENDV.setText(model.getValueAt(i, 1).toString());
         jTextFieldGIADV.setText(model.getValueAt(i, 2).toString());
 
-    }//GEN-LAST:event_jTableDichvuMouseClicked
+    }
 
     
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -388,23 +383,23 @@ public class dichvuform extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(dichvuform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DichVuForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(dichvuform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DichVuForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(dichvuform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DichVuForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(dichvuform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DichVuForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new dichvuform().setVisible(true);
+                new DichVuForm().setVisible(true);
             }
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private javax.swing.JButton jButtonclear1;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -422,5 +417,5 @@ public class dichvuform extends javax.swing.JFrame {
     private javax.swing.JButton them2;
     private javax.swing.JButton thoat2;
     private javax.swing.JButton xoa2;
-    // End of variables declaration//GEN-END:variables
+
 }

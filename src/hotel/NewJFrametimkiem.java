@@ -98,7 +98,7 @@ public class NewJFrametimkiem extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:                                       
        String TK[]={
            "MÃ SINH VIÊN","HỌ TÊN ","NƠI SINH ","ĐỊA CHỈ","GIỚI TÍNH","MÃ LỚP"
@@ -136,11 +136,11 @@ public class NewJFrametimkiem extends javax.swing.JFrame {
       
        }
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
-    private void jTextFieldTKnhanvienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTKnhanvienActionPerformed
+    private void jTextFieldTKnhanvienActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTKnhanvienActionPerformed
+    }
 
 
     public static void main(String args[]) {
@@ -169,11 +169,9 @@ public class NewJFrametimkiem extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTabletimkiemnhanvien;
     private javax.swing.JTextField jTextFieldTKnhanvien;
-    // End of variables declaration//GEN-END:variables
 }

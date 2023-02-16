@@ -27,7 +27,7 @@ public class Phong {
     }
 
     Phong(String string, String string0, String string1, double aDouble, String string2, String string3) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public String getMAPHONG() {

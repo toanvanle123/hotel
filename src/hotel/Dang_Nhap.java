@@ -12,7 +12,6 @@ public class Dang_Nhap extends javax.swing.JFrame {
 
 
     @SuppressWarnings()
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -36,7 +35,7 @@ public class Dang_Nhap extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 18));
         jButton1.setText("LOG IN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -45,15 +44,15 @@ public class Dang_Nhap extends javax.swing.JFrame {
         });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/if_preferences-desktop-cryptography_8794.png"))); // NOI18N
-        jLabel1.setText("Tài Khoản");
+        jLabel1.setText("Account");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/ssssss.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/ssssss.png")));
         jLabel2.setText("Pass");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("QUẢN LÝ KHÁCH SẠN");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18));
+        jLabel3.setText("HOTEL MANAGER");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/eeeeeeeeeeeeeee.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/eeeeeeeeeeeeeee.png")));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -119,32 +118,32 @@ public class Dang_Nhap extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void txtUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserActionPerformed
+    private void txtUserActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUserActionPerformed
+    }
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if(txtUser.getText().equals("")){
-            JOptionPane.showMessageDialog(this, "Vui lòng đăng nhập tài khoản");
+            JOptionPane.showMessageDialog(this, "Please login your account");
         } else if(txtPassword.getText().equals("")){
-            JOptionPane.showMessageDialog(this, "Vui lòng đăng nhập mật khẩu");
+            JOptionPane.showMessageDialog(this, "Please login password");
         } else if(txtUser.getText().equals("admin")){
                 if(txtPassword.getText().equals("admin")){
-                        JOptionPane.showMessageDialog(this, "đăng nhập thành công");
+                        JOptionPane.showMessageDialog(this, "Logged in successfully");
                         MENUFORM ql=new MENUFORM();
                         ql.setVisible(true);
                         this.setVisible(false);
                 }
                 else{
-                    JOptionPane.showMessageDialog(this, "sai mật khẩu");
+                    JOptionPane.showMessageDialog(this, "wrong password");
                 }
         }else{
-            JOptionPane.showMessageDialog(this, "đăng nhập thất bại");
+            JOptionPane.showMessageDialog(this, "Login failed");
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
 
 
     public static void main(String args[]) {
@@ -165,7 +164,7 @@ public class Dang_Nhap extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Dang_Nhap.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+
 
         
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -175,7 +174,7 @@ public class Dang_Nhap extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -184,5 +183,5 @@ public class Dang_Nhap extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtUser;
-    // End of variables declaration//GEN-END:variables
+
 }

@@ -27,7 +27,7 @@ public class KhachHang {
     }
 
     KhachHang(String string, String string0, String string1, String string2, String string3, int aInt, String string4) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public String getMAKH() {

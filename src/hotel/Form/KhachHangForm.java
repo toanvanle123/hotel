@@ -12,10 +12,10 @@ import hotel.KhachHang;
 import static hotel.MyConnection.getConnection;
 
 
-public class khachhangform extends javax.swing.JFrame {
+public class KhachHangForm extends javax.swing.JFrame {
 
    
-    public khachhangform() {
+    public KhachHangForm() {
         initComponents();
         getConnection();
         hienThiDanhSachKhachHang();
@@ -29,14 +29,14 @@ public class khachhangform extends javax.swing.JFrame {
         try {
             st = (Statement) con.createStatement();
             String sql = "SELECT * FROM khachhang";
-            // Thưcj thi câu lệnh truy vấn
+
             ResultSet rs = st.executeQuery(sql);
 
             KhachHang kh;
             while (rs.next()) {
                 kh = new KhachHang(rs.getString("MAKH"), rs.getString("TENKH"), rs.getString("CMND"), rs.getString("QUOCTICH"), rs.getString("GIOITINH"), rs.getInt("TUOI"), rs.getString("SDT"), rs.getString("MAPHONG") );
 
-                //Thêm vào danh sách
+
                 dskh.add(kh);
             }
         } catch (Exception ex) {
@@ -46,7 +46,7 @@ public class khachhangform extends javax.swing.JFrame {
         return dskh;
     }
      public void hienThiDanhSachKhachHang() {
-        String colTieuDe1[] = new String[]{"Mã Khách Hàng", "Tên Khách Hàng", "Chứng Minh Nhân Dân", "Quốc Tịch", "Giới Tính", "Tuổi", "Số Điện Thoại", "Mã Phòng"};
+        String colTieuDe1[] = new String[]{"Customer's code", "Customer name", "Identity Card", "Nationality", "Sex", "Year old", "Phone number", "Room Code"};
         ArrayList<KhachHang> dskh = layDanhSachKhachHang();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -70,7 +70,7 @@ public class khachhangform extends javax.swing.JFrame {
             model.addRow(row);
         }
         
-        //    }catch(ArrayIndexOutOfBoundsException ex){
+
 
         jTableKhachhang.setModel(model);
 
@@ -78,7 +78,6 @@ public class khachhangform extends javax.swing.JFrame {
 
    
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel4 = new javax.swing.JPanel();
@@ -113,23 +112,23 @@ public class khachhangform extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(0, 204, 255));
 
-        jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Thông Tin Khách Hàng"));
+        jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Customer information"));
 
-        jLabel10.setText("Mã Khách Hàng");
+        jLabel10.setText("Customer's code");
 
-        jLabel11.setText("Tên Khách Hàng");
+        jLabel11.setText("Customer name");
 
-        jLabel12.setText("Chứng Minh Nhân Dân");
+        jLabel12.setText("Identity Card");
 
-        jLabel13.setText("Quốc Tịch");
+        jLabel13.setText("Nationality");
 
-        jLabel14.setText("Giới Tính");
+        jLabel14.setText("Sex");
 
-        jLabel15.setText("Tuổi ");
+        jLabel15.setText("Year old ");
 
-        jLabel16.setText("Số Điện Thoại");
+        jLabel16.setText("Phone number");
 
-        jLabel17.setText("Mã Phòng");
+        jLabel17.setText("Room code");
 
         jTextFieldMAKH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,39 +148,39 @@ public class khachhangform extends javax.swing.JFrame {
             }
         });
 
-        them1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THEM.png"))); // NOI18N
-        them1.setText("Thêm");
+        them1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THEM.png")));
+        them1.setText("More");
         them1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 them1ActionPerformed(evt);
             }
         });
 
-        sua1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/SUA.png"))); // NOI18N
-        sua1.setText("Sửa");
+        sua1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/SUA.png")));
+        sua1.setText("Fix");
         sua1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sua1ActionPerformed(evt);
             }
         });
 
-        xoa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/XOA.png"))); // NOI18N
-        xoa1.setText("Xóa");
+        xoa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/XOA.png")));
+        xoa1.setText("Delete");
         xoa1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 xoa1ActionPerformed(evt);
             }
         });
 
-        thoat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THOAT.png"))); // NOI18N
-        thoat1.setText("Thoát");
+        thoat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THOAT.png")));
+        thoat1.setText("Exit");
         thoat1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thoat1ActionPerformed(evt);
             }
         });
 
-        jButtonclear2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/CLEAR.png"))); // NOI18N
+        jButtonclear2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/CLEAR.png")));
         jButtonclear2.setText("Clear");
         jButtonclear2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -276,8 +275,8 @@ public class khachhangform extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel9.setText("QUẢN LÝ KHÁCH HÀNG");
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24));
+        jLabel9.setText("CUSTOMER MANAGEMENT");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -364,25 +363,25 @@ public class khachhangform extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jTextFieldMAKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMAKHActionPerformed
+    private void jTextFieldMAKHActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMAKHActionPerformed
+    }
 
-    private void jTextFieldTENKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTENKHActionPerformed
+    private void jTextFieldTENKHActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTENKHActionPerformed
+    }
 
-    private void jTextFieldMAPHONGKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMAPHONGKHActionPerformed
+    private void jTextFieldMAPHONGKHActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMAPHONGKHActionPerformed
+    }
 
-    private void them1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_them1ActionPerformed
+    private void them1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "INSERT INTO khachhang(MAKH,TENKH, CMND, QUOCTICH, GIOITINH, TUOI, SDT, MAPHONG) VALUES('" + jTextFieldMAKH.getText() + "',"
             + "'" + jTextFieldTENKH.getText() + "','" + jTextFieldCMND.getText() + "', '" + jTextFieldQUOCTICH.getText() + "', '" + jTextFieldGIOITINHKH.getText() + "', '" + jTextFieldTUOI.getText() + "', '" + jTextFieldSDT.getText() + "', '" + jTextFieldMAPHONGKH.getText() + "')";
@@ -394,16 +393,16 @@ public class khachhangform extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-    }//GEN-LAST:event_them1ActionPerformed
+    }
 
-    private void sua1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sua1ActionPerformed
+    private void sua1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (jTableKhachhang.getSelectedRow()==-1) {
             if (jTableKhachhang.getRowCount()==0) {
-                // lblError.setText("Table is empty");
+
             }
             else{
-                //  lblError.setText("You must select a Tennis Player");
+
             }
         }
         else{
@@ -417,13 +416,13 @@ public class khachhangform extends javax.swing.JFrame {
             model.setValueAt(jTextFieldSDT.getText(), jTableKhachhang.getSelectedRow(), 6);
             model.setValueAt(jTextFieldMAPHONGKH.getText(), jTableKhachhang.getSelectedRow(), 7);
         }
-    }//GEN-LAST:event_sua1ActionPerformed
+    }
 
-    private void xoa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoa1ActionPerformed
+    private void xoa1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "DELETE FROM khachhang WHERE MAKH = '" + jTextFieldMAKH.getText() + "'";
             st.executeUpdate(query);
@@ -433,20 +432,20 @@ public class khachhangform extends javax.swing.JFrame {
 
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_xoa1ActionPerformed
+    }
 
-    private void thoat1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thoat1ActionPerformed
+    private void thoat1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        thoat1.setToolTipText("Click để thoát chương trình ");
-        int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
-            + " trình không", "Thông báo", JOptionPane.YES_NO_CANCEL_OPTION);
+        thoat1.setToolTipText("Click to exit the program ");
+        int selected = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit the program?"
+            + " ", "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
         if (selected == JOptionPane.YES_NO_OPTION) {
             this.dispose();
 
         }
-    }//GEN-LAST:event_thoat1ActionPerformed
+    }
 
-    private void jButtonclear2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonclear2ActionPerformed
+    private void jButtonclear2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jTextFieldMAKH.setText("");
         jTextFieldTENKH.setText("");
@@ -458,9 +457,9 @@ public class khachhangform extends javax.swing.JFrame {
         jTextFieldMAPHONGKH.setText("");
         jTextFieldMAKH.requestFocus();
 
-    }//GEN-LAST:event_jButtonclear2ActionPerformed
+    }
 
-    private void jTableKhachhangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableKhachhangMouseClicked
+    private void jTableKhachhangMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here:
         int i = jTableKhachhang.getSelectedRow();
         TableModel model = jTableKhachhang.getModel();
@@ -472,7 +471,7 @@ public class khachhangform extends javax.swing.JFrame {
         jTextFieldTUOI.setText(model.getValueAt(i, 5).toString());
         jTextFieldSDT.setText(model.getValueAt(i, 6).toString());
         jTextFieldMAPHONGKH.setText(model.getValueAt(i, 7).toString());
-    }//GEN-LAST:event_jTableKhachhangMouseClicked
+    }
 
     
     public static void main(String args[]) {
@@ -485,18 +484,18 @@ public class khachhangform extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(khachhangform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(KhachHangForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(khachhangform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(KhachHangForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(khachhangform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(KhachHangForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(khachhangform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(KhachHangForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new khachhangform().setVisible(true);
+                new KhachHangForm().setVisible(true);
             }
         });
     }

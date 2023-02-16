@@ -10,10 +10,10 @@ import static hotel.MyConnection.getConnection;
 import hotel.NhanVien;
 
 
-public class nhanvienform extends javax.swing.JFrame {
+public class NhanVienForm extends javax.swing.JFrame {
 
 
-    public nhanvienform() {
+    public NhanVienForm() {
         initComponents();
         getConnection();
         hienThiDanhSachNhanVien();
@@ -33,7 +33,7 @@ public class nhanvienform extends javax.swing.JFrame {
             while (rs.next()) {
                 nv = new NhanVien(rs.getString("MANV"), rs.getString("TENNV"), rs.getString("CHUCVU"), rs.getDouble("LUONGNV"), rs.getDate("NGAYSINH"), rs.getString("GIOITINH"), rs.getString("CHUTHICH") );
 
-                //Thêm vào danh sách
+
                 dsnv.add(nv);
             }
         } catch (Exception ex) {
@@ -44,7 +44,7 @@ public class nhanvienform extends javax.swing.JFrame {
     }
     
     public void hienThiDanhSachNhanVien() {
-        String colTieuDe1[] = new String[]{"Mã Nhân Viên", "Tên Nhân Viên", "Chức Vụ", "Lương", "Ngày Sinh", "Giới Tính", "Chú Thích"};
+        String colTieuDe1[] = new String[]{"Employee Code", "Staff's name", "Position", "Wage", "Date of birth", "Sex", "Note"};
         ArrayList<NhanVien> dsnv = layDanhSachNhanVien();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -67,7 +67,7 @@ public class nhanvienform extends javax.swing.JFrame {
             model.addRow(row);
         }
         
-        //    }catch(ArrayIndexOutOfBoundsException ex){
+
 
         jTableNhanvien.setModel(model);
 
@@ -75,7 +75,6 @@ public class nhanvienform extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
@@ -108,8 +107,8 @@ public class nhanvienform extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(51, 204, 255));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("QUẢN LÝ NHÂN VIÊN");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24));
+        jLabel1.setText("EMPLOYEE MANAGER");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -128,21 +127,20 @@ public class nhanvienform extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder("Thông Tin Nhân Viên"));
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder("Staff information"));
+        jLabel2.setText("Employee Code");
 
-        jLabel2.setText("Mã Nhân Viên");
+        jLabel3.setText("Staff's name");
 
-        jLabel3.setText("Tên Nhân Viên");
+        jLabel4.setText("Position");
 
-        jLabel4.setText("Chức Vụ");
+        jLabel5.setText("Wage");
 
-        jLabel5.setText("Lương");
+        jLabel6.setText("Date of birth");
 
-        jLabel6.setText("Ngày Sinh");
+        jLabel7.setText("Sex");
 
-        jLabel7.setText("Giới Tính");
-
-        jLabel8.setText("Chú Thích");
+        jLabel8.setText("Note");
 
         jTextFieldTENNV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,39 +154,39 @@ public class nhanvienform extends javax.swing.JFrame {
             }
         });
 
-        them.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THEM.png"))); // NOI18N
-        them.setText("Thêm");
+        them.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THEM.png")));
+        them.setText("More");
         them.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 themActionPerformed(evt);
             }
         });
 
-        sua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/SUA.png"))); // NOI18N
-        sua.setText("Sửa");
+        sua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/SUA.png")));
+        sua.setText("Fix");
         sua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 suaActionPerformed(evt);
             }
         });
 
-        xoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/XOA.png"))); // NOI18N
-        xoa.setText("Xóa");
+        xoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/XOA.png")));
+        xoa.setText("Delete");
         xoa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 xoaActionPerformed(evt);
             }
         });
 
-        thoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THOAT.png"))); // NOI18N
-        thoat.setText("Thoát");
+        thoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THOAT.png")));
+        thoat.setText("Exit");
         thoat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thoatActionPerformed(evt);
             }
         });
 
-        jButtonclear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/CLEAR.png"))); // NOI18N
+        jButtonclear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/CLEAR.png")));
         jButtonclear.setText("Clear");
         jButtonclear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -362,9 +360,9 @@ public class nhanvienform extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jTableNhanvienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableNhanvienMouseClicked
+    private void jTableNhanvienMouseClicked(java.awt.event.MouseEvent evt) {
 
         // TODO add your handling code here:
         int i = jTableNhanvien.getSelectedRow();
@@ -376,9 +374,9 @@ public class nhanvienform extends javax.swing.JFrame {
         jTextFieldNGAYSINH.setText(model.getValueAt(i, 4).toString());
         jTextFieldGIOITINH.setText(model.getValueAt(i, 5).toString());
         jTextFieldCHUTHICH.setText(model.getValueAt(i, 6).toString());
-    }//GEN-LAST:event_jTableNhanvienMouseClicked
+    }
 
-    private void jButtonclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonclearActionPerformed
+    private void jButtonclearActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jTextFieldMANV.setText("");
         jTextFieldTENNV.setText("");
@@ -388,24 +386,24 @@ public class nhanvienform extends javax.swing.JFrame {
         jTextFieldGIOITINH.setText("");
         jTextFieldCHUTHICH.setText("");
         jTextFieldMANV.requestFocus();
-    }//GEN-LAST:event_jButtonclearActionPerformed
+    }
 
-    private void thoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thoatActionPerformed
+    private void thoatActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        thoat.setToolTipText("Click để thoát chương trình ");
-        int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
-            + " trình không", "Thông báo", JOptionPane.YES_NO_CANCEL_OPTION);
+        thoat.setToolTipText("Click to exit the program ");
+        int selected = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit the program?"
+            + " ", "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
         if (selected == JOptionPane.YES_NO_OPTION) {
             this.dispose();
 
         }
-    }//GEN-LAST:event_thoatActionPerformed
+    }
 
-    private void xoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoaActionPerformed
+    private void xoaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "DELETE FROM NhanVien WHERE MANV = '" + jTextFieldMANV.getText() + "'";
             st.executeUpdate(query);
@@ -415,17 +413,17 @@ public class nhanvienform extends javax.swing.JFrame {
 
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_xoaActionPerformed
+    }
 
-    private void suaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suaActionPerformed
+    private void suaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
 
         if (jTableNhanvien.getSelectedRow()==-1) {
             if (jTableNhanvien.getRowCount()==0) {
-                // lblError.setText("Table is empty");
+
             }
             else{
-                //  lblError.setText("You must select a Tennis Player");
+
             }
         }
         else{
@@ -438,9 +436,9 @@ public class nhanvienform extends javax.swing.JFrame {
             model.setValueAt(jTextFieldGIOITINH.getText(), jTableNhanvien.getSelectedRow(), 2);
             model.setValueAt(jTextFieldCHUTHICH.getText(), jTableNhanvien.getSelectedRow(), 2);
         }
-    }//GEN-LAST:event_suaActionPerformed
+    }
 
-    private void themActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themActionPerformed
+    private void themActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         String insertSql = "INSERT INTO NhanVien(MANV,TENNV,CHUCVU, LUONGNV, NGAYSINH, GIOITINH, CHUTHICH) " +
@@ -464,15 +462,15 @@ public class nhanvienform extends javax.swing.JFrame {
             System.err.println("Error while inserting data: " + e.getMessage());
         }
 
-    }//GEN-LAST:event_themActionPerformed
+    }
 
-    private void jTextFieldLUONGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLUONGActionPerformed
+    private void jTextFieldLUONGActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldLUONGActionPerformed
+    }
 
-    private void jTextFieldTENNVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTENNVActionPerformed
+    private void jTextFieldTENNVActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTENNVActionPerformed
+    }
 
 
     public static void main(String args[]) {
@@ -485,18 +483,18 @@ public class nhanvienform extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(nhanvienform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NhanVienForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(nhanvienform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NhanVienForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(nhanvienform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NhanVienForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(nhanvienform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NhanVienForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new nhanvienform().setVisible(true);
+                new NhanVienForm().setVisible(true);
             }
         });
     }

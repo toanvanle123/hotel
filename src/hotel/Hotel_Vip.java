@@ -36,14 +36,14 @@ public class Hotel_Vip extends javax.swing.JFrame {
         try {
             st = (Statement) con.createStatement();
             String sql = "SELECT * FROM nhanvien";
-            // Thưcj thi câu lệnh truy vấn
+
             ResultSet rs = st.executeQuery(sql);
 
             NhanVien nv;
             while (rs.next()) {
                 nv = new NhanVien(rs.getString("MANV"), rs.getString("TENNV"), rs.getString("CHUCVU"), rs.getDouble("LUONGNV"), rs.getDate("NGAYSINH"), rs.getString("GIOITINH"), rs.getString("CHUTHICH") );
 
-                //Thêm vào danh sách
+
                 dsnv.add(nv);
             }
         } catch (Exception ex) {
@@ -65,7 +65,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             row = new Object[7];
 
-            // GÁN GIÁ TRỊ
+
             row[0] = dsnv.get(i).getMANV();
             row[1] = dsnv.get(i).getTENNV();
             row[2] = dsnv.get(i).getCHUCVU();
@@ -77,7 +77,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
             model.addRow(row);
         }
         
-        //    }catch(ArrayIndexOutOfBoundsException ex){
+
 
         jTableNhanvien.setModel(model);
 
@@ -88,14 +88,14 @@ public class Hotel_Vip extends javax.swing.JFrame {
         try {
             st = (Statement) con.createStatement();
             String sql = "SELECT * FROM khachhang";
-            // Thưcj thi câu lệnh truy vấn
+
             ResultSet rs = st.executeQuery(sql);
 
             KhachHang kh;
             while (rs.next()) {
                 kh = new KhachHang(rs.getString("MAKH"), rs.getString("TENKH"), rs.getString("CMND"), rs.getString("QUOCTICH"), rs.getString("GIOITINH"), rs.getInt("TUOI"), rs.getString("SDT"), rs.getString("MAPHONG") );
 
-                //Thêm vào danh sách
+
                 dskh.add(kh);
             }
         } catch (Exception ex) {
@@ -129,7 +129,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
             model.addRow(row);
         }
         
-        //    }catch(ArrayIndexOutOfBoundsException ex){
+
 
         jTableKhachhang.setModel(model);
 
@@ -140,14 +140,14 @@ public class Hotel_Vip extends javax.swing.JFrame {
         try {
             st = (Statement) con.createStatement();
             String sql = "SELECT * FROM dichvu";
-            // Thưcj thi câu lệnh truy vấn
+
             ResultSet rs = st.executeQuery(sql);
 
             DichVu dv;
             while (rs.next()) {
                 dv = new DichVu(rs.getString("MADV"), rs.getString("TENDV"), rs.getDouble("GIADV") );
 
-                //Thêm vào danh sách
+
                 dsdv.add(dv);
             }
         } catch (Exception ex) {
@@ -168,7 +168,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             row = new Object[3];
 
-            // GÁN GIÁ TRỊ
+
             row[0] = dsdv.get(i).getMADV();
             row[1] = dsdv.get(i).getTENNVL();
             row[2] = dsdv.get(i).getGIADV();
@@ -176,7 +176,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
             model.addRow(row);
         }
         
-        //    }catch(ArrayIndexOutOfBoundsException ex){
+
 
         jTableDichvu.setModel(model);
 
@@ -187,14 +187,14 @@ public class Hotel_Vip extends javax.swing.JFrame {
         try {
             st = (Statement) con.createStatement();
             String sql = "SELECT * FROM phong";
-            // Thưcj thi câu lệnh truy vấn
+
             ResultSet rs = st.executeQuery(sql);
 
             Phong p;
             while (rs.next()) {
                 p = new Phong(rs.getString("MAPHONG"), rs.getString("TENPHONG"), rs.getString("LOAIPHONG"), rs.getDouble("GIAPHONG"), rs.getString("CHUTHICH"), rs.getString("TINHTRANG"), rs.getString("MANV"), rs.getString("MADV") );
 
-                //Thêm vào danh sách
+
                 dsp.add(p);
             }
         } catch (Exception ex) {
@@ -215,7 +215,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             row = new Object[8];
 
-            // GÁN GIÁ TRỊ
+
             row[0] = dsp.get(i).getMAPHONG();
             row[1] = dsp.get(i).getTENPHONG();
             row[2] = dsp.get(i).getLOAIPHONG();
@@ -228,7 +228,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
             model.addRow(row);
         }
         
-        //}catch(ArrayIndexOutOfBoundsException ex){
+
 
         jTablePHONG.setModel(model);
 
@@ -239,14 +239,14 @@ public class Hotel_Vip extends javax.swing.JFrame {
         try {
             st = (Statement) con.createStatement();
             String sql = "SELECT * FROM hoadon";
-            // Thưcj thi câu lệnh truy vấn
+
             ResultSet rs = st.executeQuery(sql);
 
             HoaDon hd;
             while (rs.next()) {
                 hd = new HoaDon(rs.getString("MAHD"), rs.getString("MANV"), rs.getString("MAPHONG"), rs.getDate("NGAY"), rs.getDouble("GIAHD") );
 
-                //Thêm vào danh sách
+
                 dshd.add(hd);
             }
         } catch (Exception ex) {
@@ -267,7 +267,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             row = new Object[5];
 
-            // GÁN GIÁ TRỊ
+
             row[0] = dshd.get(i).getMAHD();
             row[1] = dshd.get(i).getMANV();
             row[2] = dshd.get(i).getMAPHONG();
@@ -277,7 +277,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
             model.addRow(row);
         }
         
-        //    }catch(ArrayIndexOutOfBoundsException ex){
+
 
         jTableHOADON.setModel(model);
 
@@ -1518,15 +1518,15 @@ public class Hotel_Vip extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldTENNVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTENNVActionPerformed
+    private void jTextFieldTENNVActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTENNVActionPerformed
+    }
 
-    private void jTextFieldLUONGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLUONGActionPerformed
+    private void jTextFieldLUONGActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldLUONGActionPerformed
+    }
 
-    private void jTableNhanvienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableNhanvienMouseClicked
+    private void jTableNhanvienMouseClicked(java.awt.event.MouseEvent evt) {
                                        
         // TODO add your handling code here:
         int i = jTableNhanvien.getSelectedRow();
@@ -1538,13 +1538,13 @@ public class Hotel_Vip extends javax.swing.JFrame {
         jTextFieldNGAYSINH.setText(model.getValueAt(i, 4).toString());
         jTextFieldGIOITINH.setText(model.getValueAt(i, 5).toString());
         jTextFieldCHUTHICH.setText(model.getValueAt(i, 6).toString());
-    }//GEN-LAST:event_jTableNhanvienMouseClicked
+    }
 
-    private void themActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themActionPerformed
+    private void themActionPerformed(java.awt.event.ActionEvent evt) {
            // TODO add your handling code here:
             Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "INSERT INTO NhanVien(MANV,TENNV,CHUCVU, LUONGNV, NGAYSINH, GIOITINH, CHUTHICH) VALUES('" + jTextFieldMANV.getText() + "',"
                     + "'" + jTextFieldTENNV.getText() + "','" + jTextFieldCHUCVU.getText() + "','" + jTextFieldLUONG.getText() + "','" + jTextFieldNGAYSINH.getText() + "','" + jTextFieldGIOITINH.getText() + "','" + jTextFieldCHUTHICH.getText() + "')";
@@ -1555,18 +1555,18 @@ public class Hotel_Vip extends javax.swing.JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_themActionPerformed
+    }
 
-    private void suaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suaActionPerformed
+    private void suaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
 
         
         if (jTableNhanvien.getSelectedRow()==-1) {
             if (jTableNhanvien.getRowCount()==0) {
-               // lblError.setText("Table is empty");
+
             }
             else{
-              //  lblError.setText("You must select a Tennis Player");
+
             }
         }
         else{
@@ -1581,25 +1581,25 @@ public class Hotel_Vip extends javax.swing.JFrame {
         }
               
         
-    }//GEN-LAST:event_suaActionPerformed
+    }
 
-    private void jTextFieldMAPHONGKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMAPHONGKHActionPerformed
+    private void jTextFieldMAPHONGKHActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMAPHONGKHActionPerformed
+    }
 
-    private void jTextFieldMAKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMAKHActionPerformed
+    private void jTextFieldMAKHActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMAKHActionPerformed
+    }
 
-    private void jTextFieldTENKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTENKHActionPerformed
+    private void jTextFieldTENKHActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTENKHActionPerformed
+    }
 
-    private void xoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoaActionPerformed
+    private void xoaActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "DELETE FROM NhanVien WHERE MANV = '" + jTextFieldMANV.getText() + "'";
             st.executeUpdate(query);
@@ -1609,9 +1609,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_xoaActionPerformed
+    }
 
-    private void thoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thoatActionPerformed
+    private void thoatActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         thoat.setToolTipText("Click để thoát chương trình ");
         int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
@@ -1620,13 +1620,13 @@ public class Hotel_Vip extends javax.swing.JFrame {
             this.dispose();
 
         }
-    }//GEN-LAST:event_thoatActionPerformed
+    }
 
-    private void them2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_them2ActionPerformed
+    private void them2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "INSERT INTO DichVu(MADV,TENDV, GIADV) VALUES('" + jTextFieldMADV.getText() + "',"
                     + "'" + jTextFieldTENDV.getText() + "','" + jTextFieldGIADV.getText() + "')";
@@ -1637,13 +1637,13 @@ public class Hotel_Vip extends javax.swing.JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_them2ActionPerformed
+    }
 
-    private void xoa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoa2ActionPerformed
+    private void xoa2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "DELETE FROM dichvu WHERE MADV = '" + jTextFieldMADV.getText() + "'";
             st.executeUpdate(query);
@@ -1653,9 +1653,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_xoa2ActionPerformed
+    }
 
-    private void thoat2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thoat2ActionPerformed
+    private void thoat2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         thoat2.setToolTipText("Click để thoát chương trình ");
         int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
@@ -1665,16 +1665,16 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
         }
         
-    }//GEN-LAST:event_thoat2ActionPerformed
+    }
 
-    private void sua2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sua2ActionPerformed
+    private void sua2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (jTableDichvu.getSelectedRow()==-1) {
             if (jTableDichvu.getRowCount()==0) {
-               // lblError.setText("Table is empty");
+
             }
             else{
-              //  lblError.setText("You must select a Tennis Player");
+
             }
         }
         else{
@@ -1685,13 +1685,13 @@ public class Hotel_Vip extends javax.swing.JFrame {
         }
         
         
-    }//GEN-LAST:event_sua2ActionPerformed
+    }
 
-    private void them3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_them3ActionPerformed
+    private void them3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "INSERT INTO phong(MAPHONG,TENPHONG, LOAIPHONG, GIAPHONG, CHUTHICH, TINHTRANG, MANV, MADV) VALUES('" + jTextFieldMAPHONG.getText() + "',"
                     + "'" + jTextFieldTENPHONG.getText() + "','" + jTextFieldLOAIPHONG.getText() + "', '" + jTextFieldGIAPHONG.getText() + "', '" + jTextFieldCHUTHICHP.getText() + "', '" + jTextFieldTINHTRANG.getText() + "', '" + jTextFieldMANVP.getText() + "', '" + jTextFieldMADVP.getText() + "')";
@@ -1704,9 +1704,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
         }
        
         
-    }//GEN-LAST:event_them3ActionPerformed
+    }
 
-    private void jTableDichvuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableDichvuMouseClicked
+    private void jTableDichvuMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here
         int i = jTableDichvu.getSelectedRow();
         TableModel model = jTableDichvu.getModel();
@@ -1714,13 +1714,13 @@ public class Hotel_Vip extends javax.swing.JFrame {
         jTextFieldTENDV.setText(model.getValueAt(i, 1).toString());
         jTextFieldGIADV.setText(model.getValueAt(i, 2).toString());
         
-    }//GEN-LAST:event_jTableDichvuMouseClicked
+    }
 
-    private void xoa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoa3ActionPerformed
+    private void xoa3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "DELETE FROM phong WHERE MAPHONG = '" + jTextFieldMAPHONG.getText() + "'";
             st.executeUpdate(query);
@@ -1731,9 +1731,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         
-    }//GEN-LAST:event_xoa3ActionPerformed
+    }
 
-    private void jTablePHONGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTablePHONGMouseClicked
+    private void jTablePHONGMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here:
         int i = jTablePHONG.getSelectedRow();
         TableModel model = jTablePHONG.getModel();
@@ -1745,9 +1745,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
         jTextFieldTINHTRANG.setText(model.getValueAt(i, 5).toString());
         jTextFieldMANVP.setText(model.getValueAt(i, 6).toString());
         jTextFieldMADVP.setText(model.getValueAt(i, 7).toString());
-    }//GEN-LAST:event_jTablePHONGMouseClicked
+    }
 
-    private void thoat3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thoat3ActionPerformed
+    private void thoat3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         thoat3.setToolTipText("Click để thoát chương trình ");
         int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
@@ -1756,13 +1756,13 @@ public class Hotel_Vip extends javax.swing.JFrame {
             this.dispose();
 
         }
-    }//GEN-LAST:event_thoat3ActionPerformed
+    }
 
-    private void them1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_them1ActionPerformed
+    private void them1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "INSERT INTO khachhang(MAKH,TENKH, CMND, QUOCTICH, GIOITINH, TUOI, SDT, MAPHONG) VALUES('" + jTextFieldMAKH.getText() + "',"
                     + "'" + jTextFieldTENKH.getText() + "','" + jTextFieldCMND.getText() + "', '" + jTextFieldQUOCTICH.getText() + "', '" + jTextFieldGIOITINHKH.getText() + "', '" + jTextFieldTUOI.getText() + "', '" + jTextFieldSDT.getText() + "', '" + jTextFieldMAPHONGKH.getText() + "')";
@@ -1775,9 +1775,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
         }
         
         
-    }//GEN-LAST:event_them1ActionPerformed
+    }
 
-    private void jTableKhachhangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableKhachhangMouseClicked
+    private void jTableKhachhangMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here:
         int i = jTableKhachhang.getSelectedRow();
         TableModel model = jTableKhachhang.getModel();
@@ -1789,13 +1789,13 @@ public class Hotel_Vip extends javax.swing.JFrame {
         jTextFieldTUOI.setText(model.getValueAt(i, 5).toString());
         jTextFieldSDT.setText(model.getValueAt(i, 6).toString());
         jTextFieldMAPHONGKH.setText(model.getValueAt(i, 7).toString());
-    }//GEN-LAST:event_jTableKhachhangMouseClicked
+    }
 
-    private void xoa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoa1ActionPerformed
+    private void xoa1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "DELETE FROM khachhang WHERE MAKH = '" + jTextFieldMAKH.getText() + "'";
             st.executeUpdate(query);
@@ -1805,9 +1805,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_xoa1ActionPerformed
+    }
 
-    private void thoat1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thoat1ActionPerformed
+    private void thoat1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         thoat1.setToolTipText("Click để thoát chương trình ");
         int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
@@ -1816,21 +1816,21 @@ public class Hotel_Vip extends javax.swing.JFrame {
             this.dispose();
 
         }
-    }//GEN-LAST:event_thoat1ActionPerformed
+    }
 
-    private void jTextFieldMAHDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMAHDActionPerformed
+    private void jTextFieldMAHDActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMAHDActionPerformed
+    }
 
-    private void jTextFieldMAPHONGHDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMAPHONGHDActionPerformed
+    private void jTextFieldMAPHONGHDActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMAPHONGHDActionPerformed
+    }
 
-    private void them4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_them4ActionPerformed
+    private void them4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "INSERT INTO hoadon(MAHD,MANV, MAPHONG, NGAY, GIAHD) VALUES('" + jTextFieldMAHD.getText() + "',"
                     + "'" + jTextFieldMANVHD.getText() + "','" + jTextFieldMAPHONGHD.getText() + "', '" + jTextFieldNGAY.getText() + "', '" + jTextFieldGIAHD.getText() + "')";
@@ -1842,9 +1842,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         
-    }//GEN-LAST:event_them4ActionPerformed
+    }
 
-    private void jTableHOADONMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableHOADONMouseClicked
+    private void jTableHOADONMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here:
         int i = jTableHOADON.getSelectedRow();
         TableModel model = jTableHOADON.getModel();
@@ -1853,13 +1853,13 @@ public class Hotel_Vip extends javax.swing.JFrame {
         jTextFieldMAPHONGHD.setText(model.getValueAt(i, 2).toString());
         jTextFieldNGAY.setText(model.getValueAt(i, 3).toString());
         jTextFieldGIAHD.setText(model.getValueAt(i, 4).toString());
-    }//GEN-LAST:event_jTableHOADONMouseClicked
+    }
 
-    private void xoa4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoa4ActionPerformed
+    private void xoa4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-            // Tạo một đối tượng để thực hiện công việc
+
             st = (Statement) con.createStatement();
             String query = "DELETE FROM hoadon WHERE MAHD = '" + jTextFieldMAHD.getText() + "'";
             st.executeUpdate(query);
@@ -1869,9 +1869,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_xoa4ActionPerformed
+    }
 
-    private void thoat4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thoat4ActionPerformed
+    private void thoat4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         thoat4.setToolTipText("Click để thoát chương trình ");
         int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
@@ -1880,16 +1880,16 @@ public class Hotel_Vip extends javax.swing.JFrame {
             this.dispose();
 
         }
-    }//GEN-LAST:event_thoat4ActionPerformed
+    }
 
-    private void sua3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sua3ActionPerformed
+    private void sua3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (jTablePHONG.getSelectedRow()==-1) {
             if (jTablePHONG.getRowCount()==0) {
-               // lblError.setText("Table is empty");
+
             }
             else{
-              //  lblError.setText("You must select a Tennis Player");
+
             }
         }
         else{
@@ -1903,16 +1903,14 @@ public class Hotel_Vip extends javax.swing.JFrame {
             model.setValueAt(jTextFieldMANVP.getText(), jTablePHONG.getSelectedRow(), 6);
             model.setValueAt(jTextFieldMADVP.getText(), jTablePHONG.getSelectedRow(), 7);
         }
-    }//GEN-LAST:event_sua3ActionPerformed
+    }
 
-    private void sua1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sua1ActionPerformed
+    private void sua1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (jTableKhachhang.getSelectedRow()==-1) {
             if (jTableKhachhang.getRowCount()==0) {
-               // lblError.setText("Table is empty");
             }
             else{
-              //  lblError.setText("You must select a Tennis Player");
             }
         }
         else{
@@ -1926,16 +1924,14 @@ public class Hotel_Vip extends javax.swing.JFrame {
             model.setValueAt(jTextFieldSDT.getText(), jTableKhachhang.getSelectedRow(), 6);
             model.setValueAt(jTextFieldMAPHONGKH.getText(), jTableKhachhang.getSelectedRow(), 7);
         }
-    }//GEN-LAST:event_sua1ActionPerformed
+    }
 
-    private void sua4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sua4ActionPerformed
+    private void sua4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (jTableHOADON.getSelectedRow()==-1) {
             if (jTableHOADON.getRowCount()==0) {
-               // lblError.setText("Table is empty");
             }
             else{
-              //  lblError.setText("You must select a Tennis Player");
             }
         }
         else{
@@ -1947,9 +1943,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
             model.setValueAt(jTextFieldGIAHD.getText(), jTableHOADON.getSelectedRow(), 4);
         }
         
-    }//GEN-LAST:event_sua4ActionPerformed
+    }
 
-    private void jButtonclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonclearActionPerformed
+    private void jButtonclearActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jTextFieldMANV.setText("");
         jTextFieldTENNV.setText("");
@@ -1959,17 +1955,17 @@ public class Hotel_Vip extends javax.swing.JFrame {
         jTextFieldGIOITINH.setText("");
         jTextFieldCHUTHICH.setText("");
         jTextFieldMANV.requestFocus();
-    }//GEN-LAST:event_jButtonclearActionPerformed
+    }
 
-    private void jButtonclear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonclear1ActionPerformed
+    private void jButtonclear1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jTextFieldMADV.setText("");
         jTextFieldTENDV.setText("");
         jTextFieldGIADV.setText("");
         jTextFieldMADV.requestFocus();
-    }//GEN-LAST:event_jButtonclear1ActionPerformed
+    }
 
-    private void jButtonclear2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonclear2ActionPerformed
+    private void jButtonclear2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jTextFieldMAKH.setText("");
         jTextFieldTENKH.setText("");
@@ -1981,9 +1977,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
         jTextFieldMAPHONGKH.setText("");
         jTextFieldMAKH.requestFocus();
         
-    }//GEN-LAST:event_jButtonclear2ActionPerformed
+    }
 
-    private void jButtonclear3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonclear3ActionPerformed
+    private void jButtonclear3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jTextFieldMAPHONG.setText("");
         jTextFieldTENPHONG.setText("");
@@ -1996,9 +1992,9 @@ public class Hotel_Vip extends javax.swing.JFrame {
         jTextFieldMADVP.setText("");
         jTextFieldMAPHONG.requestFocus();
         
-    }//GEN-LAST:event_jButtonclear3ActionPerformed
+    }
 
-    private void jButtonclear4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonclear4ActionPerformed
+    private void jButtonclear4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jTextFieldMAHD.setText("");
         jTextFieldMANVHD.setText("");
@@ -2008,7 +2004,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
         jTextFieldMAHD.requestFocus();
         
         
-    }//GEN-LAST:event_jButtonclear4ActionPerformed
+    }
         
 
     public static void main(String args[]) {

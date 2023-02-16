@@ -27,7 +27,7 @@ public class PhongForm extends JFrame {
         try {
             st = (Statement) con.createStatement();
             String sql = "SELECT * FROM phong";
-            // Thưcj thi câu lệnh truy vấn
+
             ResultSet rs = st.executeQuery(sql);
 
             Phong p;
@@ -51,7 +51,7 @@ public class PhongForm extends JFrame {
         return dsp;
     }
     public void hienThiDanhSachPhong() {
-        String colTieuDe1[] = new String[]{"Mã Phòng", "Tên Phòng", "Loại Phòng", "Giá Phòng", "Chú Thích", "Tình Trạng", "Mã Nhân Viên", "Mã Dịch Vụ"};
+        String colTieuDe1[] = new String[]{"Room Code", "Room Name", "Kind of room", "Room Rates", "Note", "Status", "Employee Code", "Service Code"};
         ArrayList<Phong> dsp = layDanhSachPhong();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -75,7 +75,6 @@ public class PhongForm extends JFrame {
             model.addRow(row);
         }
 
-        //}catch(ArrayIndexOutOfBoundsException ex){
 
         jTablePHONG.setModel(model);
 
@@ -83,7 +82,6 @@ public class PhongForm extends JFrame {
 
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel5 = new javax.swing.JPanel();
@@ -119,7 +117,7 @@ public class PhongForm extends JFrame {
         jPanel5.setBackground(new java.awt.Color(51, 204, 255));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel22.setText("QUẢN LÝ PHÒNG");
+        jLabel22.setText("ROOM MANAGEMENT");
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -156,58 +154,58 @@ public class PhongForm extends JFrame {
         });
         jScrollPane4.setViewportView(jTablePHONG);
 
-        jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder("Thông Tin Phòng"));
+        jPanel18.setBorder(javax.swing.BorderFactory.createTitledBorder("ROOM INFORMATION"));
 
-        jLabel23.setText("Mã Phòng");
+        jLabel23.setText("Room Code");
 
-        jLabel24.setText("Tên Phòng");
+        jLabel24.setText("Room Name");
 
-        jLabel25.setText("Loại Phòng");
+        jLabel25.setText("Kind of room");
 
-        jLabel26.setText("Giá Phòng");
+        jLabel26.setText("Room Rates");
 
-        jLabel27.setText("Chú Thích");
+        jLabel27.setText("Note");
 
-        jLabel28.setText("Tình Trạng");
+        jLabel28.setText("Status");
         
 
-        them3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THEM.png"))); // NOI18N
-        them3.setText("Thêm");
+        them3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THEM.png")));
+        them3.setText("More");
         them3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 them3ActionPerformed(evt);
             }
         });
 
-        sua3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/SUA.png"))); // NOI18N
-        sua3.setText("Sửa");
+        sua3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/SUA.png")));
+        sua3.setText("Fix");
         sua3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sua3ActionPerformed(evt);
             }
         });
 
-        xoa3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/XOA.png"))); // NOI18N
-        xoa3.setText("Xóa");
+        xoa3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/XOA.png")));
+        xoa3.setText("Delete");
         xoa3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 xoa3ActionPerformed(evt);
             }
         });
 
-        thoat3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THOAT.png"))); // NOI18N
-        thoat3.setText("Thoát");
+        thoat3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/THOAT.png")));
+        thoat3.setText("Exit");
         thoat3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thoat3ActionPerformed(evt);
             }
         });
 
-        jLabel29.setText("Mã Nhân Viên");
+        jLabel29.setText("Employee Code");
 
-        jLabel30.setText("Mã Dịch Vụ");
+        jLabel30.setText("Service Code");
 
-        jButtonclear3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/CLEAR.png"))); // NOI18N
+        jButtonclear3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hotel/Form/hinh/CLEAR.png")));
         jButtonclear3.setText("Clear");
         jButtonclear3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -353,9 +351,9 @@ public class PhongForm extends JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void jTablePHONGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTablePHONGMouseClicked
+    private void jTablePHONGMouseClicked(java.awt.event.MouseEvent evt) {
         // TODO add your handling code here:
         int i = jTablePHONG.getSelectedRow();
         TableModel model = jTablePHONG.getModel();
@@ -367,9 +365,9 @@ public class PhongForm extends JFrame {
         jTextFieldTINHTRANG.setText(model.getValueAt(i, 5).toString());
         jTextFieldMANVP.setText(model.getValueAt(i, 6).toString());
         jTextFieldMADVP.setText(model.getValueAt(i, 7).toString());
-    }//GEN-LAST:event_jTablePHONGMouseClicked
+    }
 
-    private void them3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_them3ActionPerformed
+    private void them3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here
         Connection con = getConnection();
         try {
@@ -384,16 +382,16 @@ public class PhongForm extends JFrame {
             ex.printStackTrace();
         }
 
-    }//GEN-LAST:event_them3ActionPerformed
+    }
 
-    private void sua3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sua3ActionPerformed
+    private void sua3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (jTablePHONG.getSelectedRow()==-1) {
             if (jTablePHONG.getRowCount()==0) {
-                // lblError.setText("Table is empty");
+
             }
             else{
-                //  lblError.setText("You must select a Tennis Player");
+
             }
         }
         else{
@@ -407,9 +405,9 @@ public class PhongForm extends JFrame {
             model.setValueAt(jTextFieldMANVP.getText(), jTablePHONG.getSelectedRow(), 6);
             model.setValueAt(jTextFieldMADVP.getText(), jTablePHONG.getSelectedRow(), 7);
         }
-    }//GEN-LAST:event_sua3ActionPerformed
+    }
 
-    private void xoa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoa3ActionPerformed
+    private void xoa3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
@@ -423,20 +421,20 @@ public class PhongForm extends JFrame {
             ex.printStackTrace();
         }
 
-    }//GEN-LAST:event_xoa3ActionPerformed
+    }
 
-    private void thoat3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thoat3ActionPerformed
+    private void thoat3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        thoat3.setToolTipText("Click để thoát chương trình ");
-        int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
-                + " trình không", "Thông báo", JOptionPane.YES_NO_CANCEL_OPTION);
+        thoat3.setToolTipText("Click to exit the program ");
+        int selected = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit the program?"
+                , "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
         if (selected == JOptionPane.YES_NO_OPTION) {
             this.dispose();
 
         }
-    }//GEN-LAST:event_thoat3ActionPerformed
+    }
 
-    private void jButtonclear3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonclear3ActionPerformed
+    private void jButtonclear3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         jTextFieldMAPHONG.setText("");
         jTextFieldTENPHONG.setText("");
@@ -448,7 +446,7 @@ public class PhongForm extends JFrame {
         jTextFieldMADVP.setText("");
         jTextFieldMAPHONG.requestFocus();
 
-    }//GEN-LAST:event_jButtonclear3ActionPerformed
+    }
 
    
     public static void main(String args[]) {
@@ -474,8 +472,7 @@ public class PhongForm extends JFrame {
        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //new PhongForm().setVisible(true);
-                //PhongForm.this.setVisible(true);
+
             }
         });
     }
