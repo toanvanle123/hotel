@@ -438,7 +438,7 @@ public class KhachHangForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         thoat1.setToolTipText("Click to exit the program ");
         int selected = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit the program?"
-            + " ", "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
+           , "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
         if (selected == JOptionPane.YES_NO_OPTION) {
             this.dispose();
 
