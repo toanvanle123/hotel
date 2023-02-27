@@ -110,7 +110,7 @@ public class KhachHangForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel4.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel4.setBackground(new java.awt.Color(204,255 , 204));
 
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder("Customer information"));
 

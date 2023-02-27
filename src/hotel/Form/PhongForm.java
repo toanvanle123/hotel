@@ -114,9 +114,9 @@ public class PhongForm extends JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel5.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel5.setBackground(new java.awt.Color(204, 255,204 ));
 
-        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 24));
         jLabel22.setText("ROOM MANAGEMENT");
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);

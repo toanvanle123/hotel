@@ -3,13 +3,21 @@ package hotel;
 
 import javax.swing.JOptionPane;
 
+import java.sql.Connection;
+import java.sql.Statement;
+
+import static hotel.MyConnection.getConnection;
+
 public class Dang_Nhap extends javax.swing.JFrame {
 
 
     public Dang_Nhap() {
         initComponents();
+        getConnection();
     }
+    Connection con=null;
 
+    Statement st=null;
 
     @SuppressWarnings()
     private void initComponents() {
@@ -27,7 +35,7 @@ public class Dang_Nhap extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
         txtUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

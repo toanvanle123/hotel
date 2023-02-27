@@ -100,9 +100,9 @@ public class HoaDonForm extends javax.swing.JFrame {
         jTableHOADON = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 204, 255));
+        setBackground(new java.awt.Color(204, 255,204 ));
 
-        jPanel6.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel6.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 0, 36));
         jLabel31.setText("Bill");
