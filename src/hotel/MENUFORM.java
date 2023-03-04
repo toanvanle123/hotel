@@ -1,21 +1,16 @@
 package hotel;
 
 import javax.swing.JFrame;
-
 import hotel.Form.DichVuForm;
 import hotel.Form.HoaDonForm;
 import hotel.Form.KhachHangForm;
 import hotel.Form.NhanVienForm;
 import hotel.Form.PhongForm;
 
-
 public class MENUFORM extends javax.swing.JFrame {
-
-
     public MENUFORM() {
         initComponents();
     }
-
 
     @SuppressWarnings()
 
@@ -95,7 +90,6 @@ public class MENUFORM extends javax.swing.JFrame {
     }
 
     private void jButtonnhanvienActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here
         NhanVienForm nvf = new NhanVienForm();
         nvf.setVisible(true);
         nvf.pack();
@@ -104,7 +98,6 @@ public class MENUFORM extends javax.swing.JFrame {
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
         KhachHangForm khf = new KhachHangForm();
         khf.setVisible(true);
         khf.pack();
@@ -113,7 +106,6 @@ public class MENUFORM extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code 
         PhongForm pf = new PhongForm();
         pf.setVisible(true);
         pf.pack();
@@ -122,7 +114,6 @@ public class MENUFORM extends javax.swing.JFrame {
     }
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here
         HoaDonForm hdf = new HoaDonForm();
         hdf.setVisible(true);
         hdf.pack();
@@ -131,7 +122,6 @@ public class MENUFORM extends javax.swing.JFrame {
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
         DichVuForm dvf = new DichVuForm();
         dvf.setVisible(true);
         dvf.pack();
@@ -159,14 +149,12 @@ public class MENUFORM extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MENUFORM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
-
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MENUFORM().setVisible(true);
             }
         });
     }
-
 
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -175,5 +163,4 @@ public class MENUFORM extends javax.swing.JFrame {
     private javax.swing.JButton jButtonnhanvien;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-
 }

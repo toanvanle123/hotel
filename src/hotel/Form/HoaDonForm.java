@@ -1,4 +1,3 @@
-
 package hotel.Form;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -341,15 +340,15 @@ public class HoaDonForm extends javax.swing.JFrame {
     }
 
     private void jTextFieldMAHDActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void jTextFieldMAPHONGHDActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void them4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
             st = (Statement) con.createStatement();
@@ -365,7 +364,7 @@ public class HoaDonForm extends javax.swing.JFrame {
     }
 
     private void sua4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         if (jTableHOADON.getSelectedRow()==-1) {
             if (jTableHOADON.getRowCount()==0) {
             }
@@ -383,7 +382,7 @@ public class HoaDonForm extends javax.swing.JFrame {
     }
 
     private void xoa4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
             st = (Statement) con.createStatement();
@@ -396,7 +395,7 @@ public class HoaDonForm extends javax.swing.JFrame {
     }
 
     private void thoat4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         thoat4.setToolTipText("Click to exit the program ");
         int selected = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit the program?"
             , "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -406,7 +405,7 @@ public class HoaDonForm extends javax.swing.JFrame {
     }
 
     private void jButtonclear4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         jTextFieldMAHD.setText("");
         jTextFieldMANVHD.setText("");
         jTextFieldMAPHONGHD.setText("");
@@ -416,7 +415,7 @@ public class HoaDonForm extends javax.swing.JFrame {
     }
 
     private void jTableHOADONMouseClicked(java.awt.event.MouseEvent evt) {
-        // TODO add your handling code here:
+
         int i = jTableHOADON.getSelectedRow();
         TableModel model = jTableHOADON.getModel();
         jTextFieldMAHD.setText(model.getValueAt(i, 0).toString());
@@ -451,7 +450,6 @@ public class HoaDonForm extends javax.swing.JFrame {
             }
         });
     }
-
     
     private javax.swing.JButton jButtonclear4;
     private javax.swing.JLabel jLabel31;

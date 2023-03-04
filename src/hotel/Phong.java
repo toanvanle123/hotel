@@ -1,6 +1,4 @@
-
 package hotel;
-
 
 public class Phong {
     private String MAPHONG;
@@ -12,7 +10,14 @@ public class Phong {
     private String MANV;
     private String MADV;
 
-    public Phong(String MAPHONG, String TENPHONG, String LOAIPHONG, double GIAPHONG, String CHUTHICH, String TINHTRANG, String MANV, String MADV) {
+    public Phong(String MAPHONG,
+                 String TENPHONG,
+                 String LOAIPHONG,
+                 double GIAPHONG,
+                 String CHUTHICH,
+                 String TINHTRANG,
+                 String MANV,
+                 String MADV) {
         this.MAPHONG = MAPHONG;
         this.TENPHONG = TENPHONG;
         this.LOAIPHONG = LOAIPHONG;
@@ -22,10 +27,8 @@ public class Phong {
         this.MANV = MANV;
         this.MADV = MADV;
     }
-
     public Phong() {
     }
-
     Phong(String string, String string0, String string1, double aDouble, String string2, String string3) {
         throw new UnsupportedOperationException("Not supported yet.");
     }

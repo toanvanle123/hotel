@@ -348,7 +348,7 @@ public class PhongForm extends JFrame {
     }
 
     private void jTablePHONGMouseClicked(java.awt.event.MouseEvent evt) {
-        // TODO add your handling code here:
+
         int i = jTablePHONG.getSelectedRow();
         TableModel model = jTablePHONG.getModel();
         jTextFieldMAPHONG.setText(model.getValueAt(i, 0).toString());
@@ -362,7 +362,7 @@ public class PhongForm extends JFrame {
     }
 
     private void them3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here
+
         Connection con = getConnection();
         try {
             st = (Statement) con.createStatement();
@@ -378,7 +378,7 @@ public class PhongForm extends JFrame {
     }
 
     private void sua3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         if (jTablePHONG.getSelectedRow()==-1) {
             if (jTablePHONG.getRowCount()==0) {
             }
@@ -399,7 +399,7 @@ public class PhongForm extends JFrame {
     }
 
     private void xoa3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
             st = (Statement) con.createStatement();
@@ -412,7 +412,7 @@ public class PhongForm extends JFrame {
     }
 
     private void thoat3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         thoat3.setToolTipText("Click to exit the program ");
         int selected = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit the program?"
                 , "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -422,7 +422,7 @@ public class PhongForm extends JFrame {
     }
 
     private void jButtonclear3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         jTextFieldMAPHONG.setText("");
         jTextFieldTENPHONG.setText("");
         jTextFieldLOAIPHONG.setText("");

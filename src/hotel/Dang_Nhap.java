@@ -1,16 +1,11 @@
-
 package hotel;
-
 import javax.swing.JOptionPane;
-
 import java.sql.Connection;
 import java.sql.Statement;
 
 import static hotel.MyConnection.getConnection;
 
 public class Dang_Nhap extends javax.swing.JFrame {
-
-
     public Dang_Nhap() {
         initComponents();
         getConnection();
@@ -129,11 +124,11 @@ public class Dang_Nhap extends javax.swing.JFrame {
     }
 
     private void txtUserActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         if(txtUser.getText().equals("")){
             JOptionPane.showMessageDialog(this, "Please login your account");
         } else if(txtPassword.getText().equals("")){
@@ -154,7 +149,6 @@ public class Dang_Nhap extends javax.swing.JFrame {
         }
     }
 
-
     public static void main(String args[]) {
         
         try {
@@ -174,15 +168,12 @@ public class Dang_Nhap extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Dang_Nhap.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
-
-        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Dang_Nhap().setVisible(true);
             }
         });
     }
-
 
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JButton jButton1;
@@ -192,5 +183,4 @@ public class Dang_Nhap extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtUser;
-
 }

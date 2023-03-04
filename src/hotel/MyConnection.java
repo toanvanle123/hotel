@@ -1,9 +1,7 @@
-
 package hotel;
 
 import java.sql.DriverManager;
 import java.sql.Connection;
-
 
 public class MyConnection {
     public static Connection getConnection() {

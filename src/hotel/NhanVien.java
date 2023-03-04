@@ -1,8 +1,6 @@
-
 package hotel;
 
 import java.util.Date;
-
 
 public class NhanVien {
     private String MANV;
@@ -13,7 +11,13 @@ public class NhanVien {
     private String GIOITINH;
     private String CHUTHICH;
 
-    public NhanVien(String MANV, String TENNV, String CHUCVU, double LUONGNV, Date NGAYSINH, String GIOITINH, String CHUTHICH) {
+    public NhanVien(String MANV,
+                    String TENNV,
+                    String CHUCVU,
+                    double LUONGNV,
+                    Date NGAYSINH,
+                    String GIOITINH,
+                    String CHUTHICH ) {
         this.MANV = MANV;
         this.TENNV = TENNV;
         this.CHUCVU = CHUCVU;
@@ -86,8 +90,4 @@ public class NhanVien {
     public String toString() {
         return "NhanVien{" + "MANV=" + MANV + ", TENNV=" + TENNV + ", CHUCVU=" + CHUCVU + ", LUONGNV=" + LUONGNV + ", NGAYSINH=" + NGAYSINH + ", GIOITINH=" + GIOITINH + ", CHUTHICH=" + CHUTHICH + '}';
     }
-    
-    
-    
-    
 }

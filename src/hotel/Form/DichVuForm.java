@@ -281,7 +281,7 @@ public class DichVuForm extends javax.swing.JFrame {
     }
 
     private void them2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
             st = (Statement) con.createStatement();
@@ -297,7 +297,7 @@ public class DichVuForm extends javax.swing.JFrame {
     }
 
     private void sua2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         if (jTableDichvu.getSelectedRow() == -1) {
             if (jTableDichvu.getRowCount() == 0) {
             } else {
@@ -311,7 +311,7 @@ public class DichVuForm extends javax.swing.JFrame {
     }
 
     private void xoa2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
             st = (Statement) con.createStatement();
@@ -324,7 +324,7 @@ public class DichVuForm extends javax.swing.JFrame {
     }
 
     private void thoat2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         thoat2.setToolTipText("Click to exit the program ");
         int selected = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit the program?"
                 , "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -334,7 +334,7 @@ public class DichVuForm extends javax.swing.JFrame {
     }
 
     private void jButtonclear1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         jTextFieldMADV.setText("");
         jTextFieldTENDV.setText("");
         jTextFieldGIADV.setText("");
@@ -342,14 +342,13 @@ public class DichVuForm extends javax.swing.JFrame {
     }
 
     private void jTableDichvuMouseClicked(java.awt.event.MouseEvent evt) {
-        // TODO add your handling code here
+
         int i = jTableDichvu.getSelectedRow();
         TableModel model = jTableDichvu.getModel();
         jTextFieldMADV.setText(model.getValueAt(i, 0).toString());
         jTextFieldTENDV.setText(model.getValueAt(i, 1).toString());
         jTextFieldGIADV.setText(model.getValueAt(i, 2).toString());
     }
-
 
     public static void main(String args[]) {
         try {
@@ -375,7 +374,6 @@ public class DichVuForm extends javax.swing.JFrame {
             }
         });
     }
-
 
     private javax.swing.JButton jButtonclear1;
     private javax.swing.JLabel jLabel18;

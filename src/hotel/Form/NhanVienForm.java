@@ -363,7 +363,6 @@ public class NhanVienForm extends javax.swing.JFrame {
 
     private void jTableNhanvienMouseClicked(java.awt.event.MouseEvent evt) {
 
-        // TODO add your handling code here:
         int i = jTableNhanvien.getSelectedRow();
         TableModel model = jTableNhanvien.getModel();
         jTextFieldMANV.setText(model.getValueAt(i, 0).toString());
@@ -376,7 +375,7 @@ public class NhanVienForm extends javax.swing.JFrame {
     }
 
     private void jButtonclearActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         jTextFieldMANV.setText("");
         jTextFieldTENNV.setText("");
         jTextFieldCHUCVU.setText("");
@@ -388,7 +387,7 @@ public class NhanVienForm extends javax.swing.JFrame {
     }
 
     private void thoatActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         thoat.setToolTipText("Click to exit the program ");
         int selected = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit the program?"
             , "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -399,7 +398,7 @@ public class NhanVienForm extends javax.swing.JFrame {
     }
 
     private void xoaActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
             st = (Statement) con.createStatement();
@@ -413,7 +412,6 @@ public class NhanVienForm extends javax.swing.JFrame {
     }
 
     private void suaActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
 
         if (jTableNhanvien.getSelectedRow()==-1) {
             if (jTableNhanvien.getRowCount()==0) {
@@ -434,7 +432,7 @@ public class NhanVienForm extends javax.swing.JFrame {
     }
 
     private void themActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         String insertSql = "INSERT INTO NhanVien(MANV,TENNV,CHUCVU, LUONGNV, NGAYSINH, GIOITINH, CHUTHICH) " +
                 "VALUES(?, ?, ?, ?, ?, ?, ?)";
@@ -459,10 +457,10 @@ public class NhanVienForm extends javax.swing.JFrame {
     }
 
     private void jTextFieldLUONGActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
     private void jTextFieldTENNVActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     public static void main(String args[]) {

@@ -367,19 +367,19 @@ public class KhachHangForm extends javax.swing.JFrame {
     }
 
     private void jTextFieldMAKHActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void jTextFieldTENKHActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void jTextFieldMAPHONGKHActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void them1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
             st = (Statement) con.createStatement();
@@ -396,7 +396,7 @@ public class KhachHangForm extends javax.swing.JFrame {
     }
 
     private void sua1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         if (jTableKhachhang.getSelectedRow()==-1) {
             if (jTableKhachhang.getRowCount()==0) {
             }
@@ -417,7 +417,7 @@ public class KhachHangForm extends javax.swing.JFrame {
     }
 
     private void xoa1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
             st = (Statement) con.createStatement();
@@ -430,7 +430,7 @@ public class KhachHangForm extends javax.swing.JFrame {
     }
 
     private void thoat1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         thoat1.setToolTipText("Click to exit the program ");
         int selected = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit the program?"
            , "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -440,7 +440,7 @@ public class KhachHangForm extends javax.swing.JFrame {
     }
 
     private void jButtonclear2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         jTextFieldMAKH.setText("");
         jTextFieldTENKH.setText("");
         jTextFieldCMND.setText("");
@@ -453,7 +453,7 @@ public class KhachHangForm extends javax.swing.JFrame {
     }
 
     private void jTableKhachhangMouseClicked(java.awt.event.MouseEvent evt) {
-        // TODO add your handling code here:
+
         int i = jTableKhachhang.getSelectedRow();
         TableModel model = jTableKhachhang.getModel();
         jTextFieldMAKH.setText(model.getValueAt(i, 0).toString());

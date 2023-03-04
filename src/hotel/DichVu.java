@@ -1,4 +1,3 @@
-
 package hotel;
 
 public class DichVu {
@@ -6,7 +5,9 @@ public class DichVu {
     private String TENNVL;
     private double GIADV;
 
-    public DichVu(String MADV, String TENNVL, double GIADV) {
+    public DichVu(String MADV,
+                  String TENNVL,
+                  double GIADV) {
         this.MADV = MADV;
         this.TENNVL = TENNVL;
         this.GIADV = GIADV;
@@ -43,7 +44,4 @@ public class DichVu {
     public String toString() {
         return "DichVu{" + "MADV=" + MADV + ", TENNVL=" + TENNVL + ", GIADV=" + GIADV + '}';
     }
-    
-    
-    
 }

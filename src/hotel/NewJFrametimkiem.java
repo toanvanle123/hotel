@@ -1,4 +1,3 @@
-
 package hotel;
 
 import java.sql.Connection;
@@ -8,10 +7,7 @@ import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-
 public class NewJFrametimkiem extends javax.swing.JFrame {
-
-
     public NewJFrametimkiem() {
         initComponents();
     }
@@ -19,9 +15,7 @@ public class NewJFrametimkiem extends javax.swing.JFrame {
     Connection con=null;
     ResultSet rs=null;
 
-
     @SuppressWarnings()
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -129,19 +123,16 @@ public class NewJFrametimkiem extends javax.swing.JFrame {
                modelTable.addRow(data);
            }
            jTabletimkiemnhanvien.setModel(modelTable);
-      
-           
+
        }catch(Exception e){
            e.printStackTrace();
-      
        }
-        
+
     }
 
     private void jTextFieldTKnhanvienActionPerformed(java.awt.event.ActionEvent evt) {
 
     }
-
 
     public static void main(String args[]) {
         

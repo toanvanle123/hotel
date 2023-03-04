@@ -278,12 +278,6 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
         jTableHOADON.setModel(model);
     }
-    
-   
-   
-    
-    
-
 
     @SuppressWarnings()
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -1515,16 +1509,15 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldTENNVActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void jTextFieldLUONGActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void jTableNhanvienMouseClicked(java.awt.event.MouseEvent evt) {
                                        
-        // TODO add your handling code here:
         int i = jTableNhanvien.getSelectedRow();
         TableModel model = jTableNhanvien.getModel();
         jTextFieldMANV.setText(model.getValueAt(i, 0).toString());
@@ -1537,7 +1530,6 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void themActionPerformed(java.awt.event.ActionEvent evt) {
-           // TODO add your handling code here:
             Connection con = getConnection();
         try {
 
@@ -1554,8 +1546,6 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void suaActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-
         
         if (jTableNhanvien.getSelectedRow()==-1) {
             if (jTableNhanvien.getRowCount()==0) {
@@ -1575,24 +1565,23 @@ public class Hotel_Vip extends javax.swing.JFrame {
             model.setValueAt(jTextFieldGIOITINH.getText(), jTableNhanvien.getSelectedRow(), 2);
             model.setValueAt(jTextFieldCHUTHICH.getText(), jTableNhanvien.getSelectedRow(), 2);
         }
-              
-        
+
     }
 
     private void jTextFieldMAPHONGKHActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void jTextFieldMAKHActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void jTextFieldTENKHActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void xoaActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
 
@@ -1608,7 +1597,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void thoatActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         thoat.setToolTipText("Click để thoát chương trình ");
         int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
                 + " trình không", "Thông báo", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -1619,7 +1608,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void them2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
 
@@ -1636,7 +1625,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void xoa2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
 
@@ -1652,7 +1641,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void thoat2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         thoat2.setToolTipText("Click để thoát chương trình ");
         int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
                 + " trình không", "Thông báo", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -1664,7 +1653,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void sua2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         if (jTableDichvu.getSelectedRow()==-1) {
             if (jTableDichvu.getRowCount()==0) {
 
@@ -1679,8 +1668,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
             model.setValueAt(jTextFieldTENDV.getText().toString(), jTableDichvu.getSelectedRow(), 1);
             model.setValueAt(jTextFieldGIADV.getText(), jTableDichvu.getSelectedRow(), 2);
         }
-        
-        
+
     }
 
     private void them3ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -1698,12 +1686,11 @@ public class Hotel_Vip extends javax.swing.JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-       
-        
+
     }
 
     private void jTableDichvuMouseClicked(java.awt.event.MouseEvent evt) {
-        // TODO add your handling code here
+
         int i = jTableDichvu.getSelectedRow();
         TableModel model = jTableDichvu.getModel();
         jTextFieldMADV.setText(model.getValueAt(i, 0).toString());
@@ -1713,7 +1700,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void xoa3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
 
@@ -1730,7 +1717,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void jTablePHONGMouseClicked(java.awt.event.MouseEvent evt) {
-        // TODO add your handling code here:
+
         int i = jTablePHONG.getSelectedRow();
         TableModel model = jTablePHONG.getModel();
         jTextFieldMAPHONG.setText(model.getValueAt(i, 0).toString());
@@ -1744,7 +1731,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void thoat3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         thoat3.setToolTipText("Click để thoát chương trình ");
         int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
                 + " trình không", "Thông báo", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -1755,7 +1742,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void them1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
 
@@ -1769,12 +1756,11 @@ public class Hotel_Vip extends javax.swing.JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        
-        
+
     }
 
     private void jTableKhachhangMouseClicked(java.awt.event.MouseEvent evt) {
-        // TODO add your handling code here:
+
         int i = jTableKhachhang.getSelectedRow();
         TableModel model = jTableKhachhang.getModel();
         jTextFieldMAKH.setText(model.getValueAt(i, 0).toString());
@@ -1804,7 +1790,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void thoat1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         thoat1.setToolTipText("Click để thoát chương trình ");
         int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
                 + " trình không", "Thông báo", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -1815,15 +1801,15 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void jTextFieldMAHDActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void jTextFieldMAPHONGHDActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
     private void them4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
 
@@ -1841,7 +1827,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void jTableHOADONMouseClicked(java.awt.event.MouseEvent evt) {
-        // TODO add your handling code here:
+
         int i = jTableHOADON.getSelectedRow();
         TableModel model = jTableHOADON.getModel();
         jTextFieldMAHD.setText(model.getValueAt(i, 0).toString());
@@ -1852,7 +1838,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void xoa4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         Connection con = getConnection();
         try {
 
@@ -1868,7 +1854,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void thoat4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         thoat4.setToolTipText("Click để thoát chương trình ");
         int selected = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn thoát chương"
                 + " trình không", "Thông báo", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -1879,7 +1865,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void sua3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         if (jTablePHONG.getSelectedRow()==-1) {
             if (jTablePHONG.getRowCount()==0) {
 
@@ -1902,7 +1888,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void sua1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         if (jTableKhachhang.getSelectedRow()==-1) {
             if (jTableKhachhang.getRowCount()==0) {
             }
@@ -1923,7 +1909,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void sua4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         if (jTableHOADON.getSelectedRow()==-1) {
             if (jTableHOADON.getRowCount()==0) {
             }
@@ -1942,7 +1928,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void jButtonclearActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         jTextFieldMANV.setText("");
         jTextFieldTENNV.setText("");
         jTextFieldCHUCVU.setText("");
@@ -1954,7 +1940,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void jButtonclear1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         jTextFieldMADV.setText("");
         jTextFieldTENDV.setText("");
         jTextFieldGIADV.setText("");
@@ -1962,7 +1948,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void jButtonclear2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         jTextFieldMAKH.setText("");
         jTextFieldTENKH.setText("");
         jTextFieldCMND.setText("");
@@ -1976,7 +1962,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void jButtonclear3ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         jTextFieldMAPHONG.setText("");
         jTextFieldTENPHONG.setText("");
         jTextFieldLOAIPHONG.setText("");
@@ -1991,17 +1977,15 @@ public class Hotel_Vip extends javax.swing.JFrame {
     }
 
     private void jButtonclear4ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
         jTextFieldMAHD.setText("");
         jTextFieldMANVHD.setText("");
         jTextFieldMAPHONGHD.setText("");
         jTextFieldNGAY.setText("");
         jTextFieldGIAHD.setText("");
         jTextFieldMAHD.requestFocus();
-        
-        
+
     }
-        
 
     public static void main(String args[]) {
        
@@ -2022,8 +2006,6 @@ public class Hotel_Vip extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Hotel_Vip.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
-
-        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Hotel_Vip().setVisible(true);
@@ -2031,7 +2013,6 @@ public class Hotel_Vip extends javax.swing.JFrame {
         });
     }
 
-    
     private javax.swing.JButton jButtonclear;
     private javax.swing.JButton jButtonclear1;
     private javax.swing.JButton jButtonclear2;
@@ -2154,5 +2135,4 @@ public class Hotel_Vip extends javax.swing.JFrame {
     private javax.swing.JButton xoa2;
     private javax.swing.JButton xoa3;
     private javax.swing.JButton xoa4;
-    
 }

@@ -1,4 +1,3 @@
-
 package hotel;
 
 import java.util.Date;
@@ -10,7 +9,11 @@ public class HoaDon {
     private Date NGAY;
     private double GIAHD;
 
-    public HoaDon(String MAHD, String MANV, String MAPHONG, Date NGAY, double GIAHD) {
+    public HoaDon(String MAHD,
+                  String MANV,
+                  String MAPHONG,
+                  Date NGAY,
+                  double GIAHD) {
         this.MAHD = MAHD;
         this.MANV = MANV;
         this.MAPHONG = MAPHONG;
