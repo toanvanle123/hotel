@@ -1,4 +1,3 @@
-
 package hotel;
 
 import java.sql.Connection;
@@ -10,10 +9,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import static hotel.MyConnection.getConnection;
 
-
 public class Hotel_Vip extends javax.swing.JFrame {
-
-
     public Hotel_Vip() {
         initComponents();
         layDanhSachNhanVien();
@@ -41,20 +37,30 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             NhanVien nv;
             while (rs.next()) {
-                nv = new NhanVien(rs.getString("MANV"), rs.getString("TENNV"), rs.getString("CHUCVU"), rs.getDouble("LUONGNV"), rs.getDate("NGAYSINH"), rs.getString("GIOITINH"), rs.getString("CHUTHICH") );
-
+                nv = new NhanVien(rs.getString("MANV"),
+                        rs.getString("TENNV"),
+                        rs.getString("CHUCVU"),
+                        rs.getDouble("LUONGNV"),
+                        rs.getDate("NGAYSINH"),
+                        rs.getString("GIOITINH"),
+                        rs.getString("CHUTHICH") );
 
                 dsnv.add(nv);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-
         }
         return dsnv;
     }
     
     public void hienThiDanhSachNhanVien() {
-        String colTieuDe1[] = new String[]{"Mã Nhân Viên", "Tên Nhân Viên", "Chức Vụ", "Lương", "Ngày Sinh", "Giới Tính", "Chú Thích"};
+        String colTieuDe1[] = new String[]{"Mã Nhân Viên",
+                "Tên Nhân Viên",
+                "Chức Vụ",
+                "Lương",
+                "Ngày Sinh",
+                "Giới Tính",
+                "Chú Thích"};
         ArrayList<NhanVien> dsnv = layDanhSachNhanVien();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -62,10 +68,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
         Object[] row;
 
         for (int i = 0; i < dsnv.size(); i++) {
-
             row = new Object[7];
-
-
             row[0] = dsnv.get(i).getMANV();
             row[1] = dsnv.get(i).getTENNV();
             row[2] = dsnv.get(i).getCHUCVU();
@@ -76,11 +79,8 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             model.addRow(row);
         }
-        
-
 
         jTableNhanvien.setModel(model);
-
     }
      public ArrayList<KhachHang> layDanhSachKhachHang() {
         ArrayList<KhachHang> dskh = new ArrayList<KhachHang>();
@@ -93,19 +93,31 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             KhachHang kh;
             while (rs.next()) {
-                kh = new KhachHang(rs.getString("MAKH"), rs.getString("TENKH"), rs.getString("CMND"), rs.getString("QUOCTICH"), rs.getString("GIOITINH"), rs.getInt("TUOI"), rs.getString("SDT"), rs.getString("MAPHONG") );
-
+                kh = new KhachHang(rs.getString("MAKH"),
+                        rs.getString("TENKH"),
+                        rs.getString("CMND"),
+                        rs.getString("QUOCTICH"),
+                        rs.getString("GIOITINH"),
+                        rs.getInt("TUOI"),
+                        rs.getString("SDT"),
+                        rs.getString("MAPHONG") );
 
                 dskh.add(kh);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-
         }
         return dskh;
     }
      public void hienThiDanhSachKhachHang() {
-        String colTieuDe1[] = new String[]{"Mã Khách Hàng", "Tên Khách Hàng", "Chứng Minh Nhân Dân", "Quốc Tịch", "Giới Tính", "Tuổi", "Số Điện Thoại", "Mã Phòng"};
+        String colTieuDe1[] = new String[]{"Mã Khách Hàng",
+                "Tên Khách Hàng",
+                "Chứng Minh Nhân Dân",
+                "Quốc Tịch",
+                "Giới Tính",
+                "Tuổi",
+                "Số Điện Thoại",
+                "Mã Phòng"};
         ArrayList<KhachHang> dskh = layDanhSachKhachHang();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -113,10 +125,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
         Object[] row;
 
         for (int i = 0; i < dskh.size(); i++) {
-
             row = new Object[8];
-
-            // GÁN GIÁ TRỊ
             row[0] = dskh.get(i).getMAKH();
             row[1] = dskh.get(i).getTENKH();
             row[2] = dskh.get(i).getCMND();
@@ -128,11 +137,8 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             model.addRow(row);
         }
-        
-
 
         jTableKhachhang.setModel(model);
-
     }
     public ArrayList<DichVu> layDanhSachDichVu() {
         ArrayList<DichVu> dsdv = new ArrayList<DichVu>();
@@ -145,14 +151,14 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             DichVu dv;
             while (rs.next()) {
-                dv = new DichVu(rs.getString("MADV"), rs.getString("TENDV"), rs.getDouble("GIADV") );
-
+                dv = new DichVu(rs.getString("MADV"),
+                        rs.getString("TENDV"),
+                        rs.getDouble("GIADV") );
 
                 dsdv.add(dv);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-
         }
         return dsdv;
     }
@@ -165,21 +171,15 @@ public class Hotel_Vip extends javax.swing.JFrame {
         Object[] row;
 
         for (int i = 0; i < dsdv.size(); i++) {
-
             row = new Object[3];
-
-
             row[0] = dsdv.get(i).getMADV();
             row[1] = dsdv.get(i).getTENNVL();
             row[2] = dsdv.get(i).getGIADV();
 
             model.addRow(row);
         }
-        
-
 
         jTableDichvu.setModel(model);
-
     }
     public ArrayList<Phong> layDanhSachPhong() {
         ArrayList<Phong> dsp = new ArrayList<Phong>();
@@ -192,14 +192,19 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             Phong p;
             while (rs.next()) {
-                p = new Phong(rs.getString("MAPHONG"), rs.getString("TENPHONG"), rs.getString("LOAIPHONG"), rs.getDouble("GIAPHONG"), rs.getString("CHUTHICH"), rs.getString("TINHTRANG"), rs.getString("MANV"), rs.getString("MADV") );
-
+                p = new Phong(rs.getString("MAPHONG"),
+                        rs.getString("TENPHONG"),
+                        rs.getString("LOAIPHONG"),
+                        rs.getDouble("GIAPHONG"),
+                        rs.getString("CHUTHICH"),
+                        rs.getString("TINHTRANG"),
+                        rs.getString("MANV"),
+                        rs.getString("MADV") );
 
                 dsp.add(p);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-
         }
         return dsp;
     }
@@ -212,10 +217,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
         Object[] row;
 
         for (int i = 0; i < dsp.size(); i++) {
-
             row = new Object[8];
-
-
             row[0] = dsp.get(i).getMAPHONG();
             row[1] = dsp.get(i).getTENPHONG();
             row[2] = dsp.get(i).getLOAIPHONG();
@@ -227,11 +229,8 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             model.addRow(row);
         }
-        
-
 
         jTablePHONG.setModel(model);
-
     }
     public ArrayList<HoaDon> layDanhSachHoaDon() {
         ArrayList<HoaDon> dshd = new ArrayList<HoaDon>();
@@ -244,8 +243,11 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             HoaDon hd;
             while (rs.next()) {
-                hd = new HoaDon(rs.getString("MAHD"), rs.getString("MANV"), rs.getString("MAPHONG"), rs.getDate("NGAY"), rs.getDouble("GIAHD") );
-
+                hd = new HoaDon(rs.getString("MAHD"),
+                        rs.getString("MANV"),
+                        rs.getString("MAPHONG"),
+                        rs.getDate("NGAY"),
+                        rs.getDouble("GIAHD") );
 
                 dshd.add(hd);
             }
@@ -264,10 +266,7 @@ public class Hotel_Vip extends javax.swing.JFrame {
         Object[] row;
 
         for (int i = 0; i < dshd.size(); i++) {
-
             row = new Object[5];
-
-
             row[0] = dshd.get(i).getMAHD();
             row[1] = dshd.get(i).getMANV();
             row[2] = dshd.get(i).getMAPHONG();
@@ -276,11 +275,8 @@ public class Hotel_Vip extends javax.swing.JFrame {
 
             model.addRow(row);
         }
-        
-
 
         jTableHOADON.setModel(model);
-
     }
     
    

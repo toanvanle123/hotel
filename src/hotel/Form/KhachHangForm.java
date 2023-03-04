@@ -1,4 +1,3 @@
-
 package hotel.Form;
 
 import java.sql.Connection;
@@ -11,10 +10,7 @@ import javax.swing.table.TableModel;
 import hotel.KhachHang;
 import static hotel.MyConnection.getConnection;
 
-
 public class KhachHangForm extends javax.swing.JFrame {
-
-   
     public KhachHangForm() {
         initComponents();
         getConnection();
@@ -34,19 +30,31 @@ public class KhachHangForm extends javax.swing.JFrame {
 
             KhachHang kh;
             while (rs.next()) {
-                kh = new KhachHang(rs.getString("MAKH"), rs.getString("TENKH"), rs.getString("CMND"), rs.getString("QUOCTICH"), rs.getString("GIOITINH"), rs.getInt("TUOI"), rs.getString("SDT"), rs.getString("MAPHONG") );
-
-
+                kh = new KhachHang(rs.getString("MAKH"),
+                        rs.getString("TENKH"),
+                        rs.getString("CMND"),
+                        rs.getString("QUOCTICH"),
+                        rs.getString("GIOITINH"),
+                        rs.getInt("TUOI"),
+                        rs.getString("SDT"),
+                        rs.getString("MAPHONG") );
                 dskh.add(kh);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-
         }
         return dskh;
     }
      public void hienThiDanhSachKhachHang() {
-        String colTieuDe1[] = new String[]{"Customer's code", "Customer name", "Identity Card", "Nationality", "Sex", "Year old", "Phone number", "Room Code"};
+        String colTieuDe1[] = new String[]{"Customer's code",
+                "Customer name",
+                "Identity Card",
+                "Nationality",
+                "Sex",
+                "Age",
+                "Phone number",
+                "Room Code"};
+
         ArrayList<KhachHang> dskh = layDanhSachKhachHang();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -54,10 +62,8 @@ public class KhachHangForm extends javax.swing.JFrame {
         Object[] row;
 
         for (int i = 0; i < dskh.size(); i++) {
-
             row = new Object[8];
 
-            
             row[0] = dskh.get(i).getMAKH();
             row[1] = dskh.get(i).getTENKH();
             row[2] = dskh.get(i).getCMND();
@@ -69,17 +75,12 @@ public class KhachHangForm extends javax.swing.JFrame {
 
             model.addRow(row);
         }
-        
-
 
         jTableKhachhang.setModel(model);
-
     }
 
-   
     @SuppressWarnings("unchecked")
     private void initComponents() {
-
         jPanel4 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -381,7 +382,6 @@ public class KhachHangForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-
             st = (Statement) con.createStatement();
             String query = "INSERT INTO khachhang(MAKH,TENKH, CMND, QUOCTICH, GIOITINH, TUOI, SDT, MAPHONG) VALUES('" + jTextFieldMAKH.getText() + "',"
             + "'" + jTextFieldTENKH.getText() + "','" + jTextFieldCMND.getText() + "', '" + jTextFieldQUOCTICH.getText() + "', '" + jTextFieldGIOITINHKH.getText() + "', '" + jTextFieldTUOI.getText() + "', '" + jTextFieldSDT.getText() + "', '" + jTextFieldMAPHONGKH.getText() + "')";
@@ -399,10 +399,8 @@ public class KhachHangForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (jTableKhachhang.getSelectedRow()==-1) {
             if (jTableKhachhang.getRowCount()==0) {
-
             }
             else{
-
             }
         }
         else{
@@ -422,14 +420,11 @@ public class KhachHangForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-
             st = (Statement) con.createStatement();
             String query = "DELETE FROM khachhang WHERE MAKH = '" + jTextFieldMAKH.getText() + "'";
             st.executeUpdate(query);
             hienThiDanhSachKhachHang();
-
         } catch (Exception ex) {
-
             ex.printStackTrace();
         }
     }
@@ -441,7 +436,6 @@ public class KhachHangForm extends javax.swing.JFrame {
            , "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
         if (selected == JOptionPane.YES_NO_OPTION) {
             this.dispose();
-
         }
     }
 
@@ -456,7 +450,6 @@ public class KhachHangForm extends javax.swing.JFrame {
         jTextFieldSDT.setText("");
         jTextFieldMAPHONGKH.setText("");
         jTextFieldMAKH.requestFocus();
-
     }
 
     private void jTableKhachhangMouseClicked(java.awt.event.MouseEvent evt) {
@@ -473,9 +466,7 @@ public class KhachHangForm extends javax.swing.JFrame {
         jTextFieldMAPHONGKH.setText(model.getValueAt(i, 7).toString());
     }
 
-    
     public static void main(String args[]) {
-        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -500,7 +491,6 @@ public class KhachHangForm extends javax.swing.JFrame {
         });
     }
 
-   
     private javax.swing.JButton jButtonclear2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -528,5 +518,4 @@ public class KhachHangForm extends javax.swing.JFrame {
     private javax.swing.JButton them1;
     private javax.swing.JButton thoat1;
     private javax.swing.JButton xoa1;
-    
 }

@@ -1,4 +1,3 @@
-
 package hotel.Form;
 
 import java.sql.*;
@@ -9,10 +8,7 @@ import javax.swing.table.TableModel;
 import static hotel.MyConnection.getConnection;
 import hotel.NhanVien;
 
-
 public class NhanVienForm extends javax.swing.JFrame {
-
-
     public NhanVienForm() {
         initComponents();
         getConnection();
@@ -31,20 +27,31 @@ public class NhanVienForm extends javax.swing.JFrame {
 
             NhanVien nv;
             while (rs.next()) {
-                nv = new NhanVien(rs.getString("MANV"), rs.getString("TENNV"), rs.getString("CHUCVU"), rs.getDouble("LUONGNV"), rs.getDate("NGAYSINH"), rs.getString("GIOITINH"), rs.getString("CHUTHICH") );
-
+                nv = new NhanVien(rs.getString("MANV"),
+                        rs.getString("TENNV"),
+                        rs.getString("CHUCVU"),
+                        rs.getDouble("LUONGNV"),
+                        rs.getDate("NGAYSINH"),
+                        rs.getString("GIOITINH"),
+                        rs.getString("CHUTHICH") );
 
                 dsnv.add(nv);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-
         }
         return dsnv;
     }
     
     public void hienThiDanhSachNhanVien() {
-        String colTieuDe1[] = new String[]{"Employee Code", "Staff's name", "Position", "Wage", "Date of birth", "Sex", "Note"};
+        String colTieuDe1[] = new String[]{"Employee Code",
+                                            "Staff's name",
+                                            "Position",
+                                            "Wage",
+                                            "Date of birth",
+                                            "Sex",
+                                            "Note"};
+
         ArrayList<NhanVien> dsnv = layDanhSachNhanVien();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -52,10 +59,7 @@ public class NhanVienForm extends javax.swing.JFrame {
         Object[] row;
 
         for (int i = 0; i < dsnv.size(); i++) {
-
             row = new Object[7];
-
-            
             row[0] = dsnv.get(i).getMANV();
             row[1] = dsnv.get(i).getTENNV();
             row[2] = dsnv.get(i).getCHUCVU();
@@ -66,17 +70,12 @@ public class NhanVienForm extends javax.swing.JFrame {
 
             model.addRow(row);
         }
-        
-
 
         jTableNhanvien.setModel(model);
-
     }
-
 
     @SuppressWarnings("unchecked")
     private void initComponents() {
-
         jPanel3 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -134,7 +133,7 @@ public class NhanVienForm extends javax.swing.JFrame {
 
         jLabel4.setText("Position");
 
-        jLabel5.setText("Wage");
+        jLabel5.setText("Age");
 
         jLabel6.setText("Date of birth");
 
@@ -403,14 +402,12 @@ public class NhanVienForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-
             st = (Statement) con.createStatement();
             String query = "DELETE FROM NhanVien WHERE MANV = '" + jTextFieldMANV.getText() + "'";
             st.executeUpdate(query);
             hienThiDanhSachNhanVien();
 
         } catch (Exception ex) {
-
             ex.printStackTrace();
         }
     }
@@ -420,10 +417,8 @@ public class NhanVienForm extends javax.swing.JFrame {
 
         if (jTableNhanvien.getSelectedRow()==-1) {
             if (jTableNhanvien.getRowCount()==0) {
-
             }
             else{
-
             }
         }
         else{
@@ -445,7 +440,6 @@ public class NhanVienForm extends javax.swing.JFrame {
                 "VALUES(?, ?, ?, ?, ?, ?, ?)";
         try (Connection connection = getConnection()) {
             PreparedStatement statement = connection.prepareStatement(insertSql);
-
             statement.setString(1, jTextFieldMANV.getText());
             statement.setString(2, jTextFieldTENNV.getText());
             statement.setString(3, jTextFieldCHUCVU.getText());
@@ -467,14 +461,11 @@ public class NhanVienForm extends javax.swing.JFrame {
     private void jTextFieldLUONGActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
-
     private void jTextFieldTENNVActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
-
     public static void main(String args[]) {
-        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -499,7 +490,6 @@ public class NhanVienForm extends javax.swing.JFrame {
         });
     }
 
-   
     private javax.swing.JButton jButtonclear;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -525,5 +515,4 @@ public class NhanVienForm extends javax.swing.JFrame {
     private javax.swing.JButton them;
     private javax.swing.JButton thoat;
     private javax.swing.JButton xoa;
-    
 }

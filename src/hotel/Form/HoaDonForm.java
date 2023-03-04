@@ -11,8 +11,6 @@ import hotel.HoaDon;
 import static hotel.MyConnection.getConnection;
 
 public class HoaDonForm extends javax.swing.JFrame {
-
-
     public HoaDonForm() {
         initComponents();
         getConnection();
@@ -33,19 +31,27 @@ public class HoaDonForm extends javax.swing.JFrame {
 
             HoaDon hd;
             while (rs.next()) {
-                hd = new HoaDon(rs.getString("MAHD"), rs.getString("MANV"), rs.getString("MAPHONG"), rs.getDate("NGAY"), rs.getDouble("GIAHD") );
-
+                hd = new HoaDon(rs.getString("MAHD"),
+                        rs.getString("MANV"),
+                        rs.getString("MAPHONG"),
+                        rs.getDate("NGAY"),
+                        rs.getDouble("GIAHD") );
 
                 dshd.add(hd);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-
         }
         return dshd;
     }
+
      public void hienThiDanhSachHoaDon() {
-        String colTieuDe1[] = new String[]{"Code Bill", "Employee Code", "Room Code", "Day", "Invoice Price"};
+        String colTieuDe1[] = new String[]{"Code Bill",
+                                            "Employee Code",
+                                            "Room Code",
+                                            "Day",
+                                            "Invoice Price"};
+
         ArrayList<HoaDon> dshd = layDanhSachHoaDon();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -53,10 +59,7 @@ public class HoaDonForm extends javax.swing.JFrame {
         Object[] row;
 
         for (int i = 0; i < dshd.size(); i++) {
-
             row = new Object[5];
-
-
             row[0] = dshd.get(i).getMAHD();
             row[1] = dshd.get(i).getMANV();
             row[2] = dshd.get(i).getMAPHONG();
@@ -65,17 +68,12 @@ public class HoaDonForm extends javax.swing.JFrame {
 
             model.addRow(row);
         }
-        
-
 
         jTableHOADON.setModel(model);
-
     }
-
 
     @SuppressWarnings("unchecked")
     private void initComponents() {
-
         jPanel6 = new javax.swing.JPanel();
         jPanel20 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
@@ -339,7 +337,6 @@ public class HoaDonForm extends javax.swing.JFrame {
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
-
         pack();
     }
 
@@ -355,7 +352,6 @@ public class HoaDonForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-
             st = (Statement) con.createStatement();
             String query = "INSERT INTO hoadon(MAHD,MANV, MAPHONG, NGAY, GIAHD) VALUES('" + jTextFieldMAHD.getText() + "',"
             + "'" + jTextFieldMANVHD.getText() + "','" + jTextFieldMAPHONGHD.getText() + "', '" + jTextFieldNGAY.getText() + "', '" + jTextFieldGIAHD.getText() + "')";
@@ -366,17 +362,14 @@ public class HoaDonForm extends javax.swing.JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
     }
 
     private void sua4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (jTableHOADON.getSelectedRow()==-1) {
             if (jTableHOADON.getRowCount()==0) {
-
             }
             else{
-
             }
         }
         else{
@@ -387,21 +380,17 @@ public class HoaDonForm extends javax.swing.JFrame {
             model.setValueAt(jTextFieldNGAY.getText(), jTableHOADON.getSelectedRow(), 3);
             model.setValueAt(jTextFieldGIAHD.getText(), jTableHOADON.getSelectedRow(), 4);
         }
-
     }
 
     private void xoa4ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Connection con = getConnection();
         try {
-
             st = (Statement) con.createStatement();
             String query = "DELETE FROM hoadon WHERE MAHD = '" + jTextFieldMAHD.getText() + "'";
             st.executeUpdate(query);
             hienThiDanhSachHoaDon();
-
         } catch (Exception ex) {
-
             ex.printStackTrace();
         }
     }
@@ -413,7 +402,6 @@ public class HoaDonForm extends javax.swing.JFrame {
             , "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
         if (selected == JOptionPane.YES_NO_OPTION) {
             this.dispose();
-
         }
     }
 
@@ -425,7 +413,6 @@ public class HoaDonForm extends javax.swing.JFrame {
         jTextFieldNGAY.setText("");
         jTextFieldGIAHD.setText("");
         jTextFieldMAHD.requestFocus();
-
     }
 
     private void jTableHOADONMouseClicked(java.awt.event.MouseEvent evt) {
@@ -441,7 +428,6 @@ public class HoaDonForm extends javax.swing.JFrame {
 
 
     public static void main(String args[]) {
-        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -489,5 +475,4 @@ public class HoaDonForm extends javax.swing.JFrame {
     private javax.swing.JButton them4;
     private javax.swing.JButton thoat4;
     private javax.swing.JButton xoa4;
-   
 }

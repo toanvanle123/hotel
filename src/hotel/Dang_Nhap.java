@@ -143,6 +143,7 @@ public class Dang_Nhap extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(this, "Logged in successfully");
                         MENUFORM ql=new MENUFORM();
                         ql.setVisible(true);
+                        ql.setLocationRelativeTo(null);
                         this.setVisible(false);
                 }
                 else{

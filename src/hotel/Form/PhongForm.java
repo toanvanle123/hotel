@@ -8,11 +8,7 @@ import javax.swing.table.TableModel;
 import static hotel.MyConnection.getConnection;
 import hotel.Phong;
 
-
-
 public class PhongForm extends JFrame {
-
-    
     public PhongForm() {
         initComponents();
         getConnection();
@@ -41,17 +37,22 @@ public class PhongForm extends JFrame {
                         rs.getString("MANV"),
                         rs.getString("MADV") );
 
-               
                 dsp.add(p);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-
         }
         return dsp;
     }
     public void hienThiDanhSachPhong() {
-        String colTieuDe1[] = new String[]{"Room Code", "Room Name", "Kind of room", "Room Rates", "Note", "Status", "Employee Code", "Service Code"};
+        String colTieuDe1[] = new String[]{"Room Code",
+                                            "Room Name",
+                                            "Kind of room",
+                                            "Room Rates",
+                                            "Note",
+                                            "Status",
+                                            "Employee Code",
+                                            "Service Code"};
         ArrayList<Phong> dsp = layDanhSachPhong();
 
         DefaultTableModel model = new DefaultTableModel(colTieuDe1, 0);
@@ -59,10 +60,7 @@ public class PhongForm extends JFrame {
         Object[] row;
 
         for (int i = 0; i < dsp.size(); i++) {
-
             row = new Object[8];
-
-            
             row[0] = dsp.get(i).getMAPHONG();
             row[1] = dsp.get(i).getTENPHONG();
             row[2] = dsp.get(i).getLOAIPHONG();
@@ -75,15 +73,11 @@ public class PhongForm extends JFrame {
             model.addRow(row);
         }
 
-
         jTablePHONG.setModel(model);
-
     }
 
-    
     @SuppressWarnings("unchecked")
     private void initComponents() {
-
         jPanel5 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
@@ -381,17 +375,14 @@ public class PhongForm extends JFrame {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
     }
 
     private void sua3ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         if (jTablePHONG.getSelectedRow()==-1) {
             if (jTablePHONG.getRowCount()==0) {
-
             }
             else{
-
             }
         }
         else{
@@ -415,12 +406,9 @@ public class PhongForm extends JFrame {
             String query = "DELETE FROM phong WHERE MAPHONG = '" + jTextFieldMAPHONG.getText() + "'";
             st.executeUpdate(query);
             hienThiDanhSachPhong();
-
         } catch (Exception ex) {
-
             ex.printStackTrace();
         }
-
     }
 
     private void thoat3ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -430,7 +418,6 @@ public class PhongForm extends JFrame {
                 , "Notification", JOptionPane.YES_NO_CANCEL_OPTION);
         if (selected == JOptionPane.YES_NO_OPTION) {
             this.dispose();
-
         }
     }
 
@@ -445,12 +432,9 @@ public class PhongForm extends JFrame {
         jTextFieldMANVP.setText("");
         jTextFieldMADVP.setText("");
         jTextFieldMAPHONG.requestFocus();
-
     }
 
-   
     public static void main(String args[]) {
-        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -467,12 +451,9 @@ public class PhongForm extends JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(PhongForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
 
-       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-
             }
         });
     }

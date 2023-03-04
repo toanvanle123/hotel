@@ -1,6 +1,4 @@
-
 package hotel;
-
 
 public class KhachHang {
     private String MAKH;
@@ -12,7 +10,15 @@ public class KhachHang {
     private String SDT;
     private String MAPHONG;
 
-    public KhachHang(String MAKH, String TENKH, String CMND, String QUOCTICH, String GIOITINH, int tuoi, String SDT, String MAPHONG) {
+    public KhachHang(String MAKH,
+                     String TENKH,
+                     String CMND,
+                     String QUOCTICH,
+                     String GIOITINH,
+                     int tuoi,
+                     String SDT,
+                     String MAPHONG)
+    {
         this.MAKH = MAKH;
         this.TENKH = TENKH;
         this.CMND = CMND;
@@ -98,8 +104,4 @@ public class KhachHang {
     public String toString() {
         return "khachHang{" + "MAKH=" + MAKH + ", TENKH=" + TENKH + ", CMND=" + CMND + ", QUOCTICH=" + QUOCTICH + ", GIOITINH=" + GIOITINH + ", tuoi=" + tuoi + ", SDT=" + SDT + ", MAPHONG=" + MAPHONG + '}';
     }
-    
-    
-    
-    
 }

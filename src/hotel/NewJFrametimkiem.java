@@ -96,13 +96,13 @@ public class NewJFrametimkiem extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:                                       
+
        String TK[]={
            "MÃ SINH VIÊN","HỌ TÊN ","NƠI SINH ","ĐỊA CHỈ","GIỚI TÍNH","MÃ LỚP"
-           
+
        };
        DefaultTableModel modelTable=new DefaultTableModel(TK,0);
        try{
@@ -139,7 +139,7 @@ public class NewJFrametimkiem extends javax.swing.JFrame {
     }
 
     private void jTextFieldTKnhanvienActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
     }
 
 
